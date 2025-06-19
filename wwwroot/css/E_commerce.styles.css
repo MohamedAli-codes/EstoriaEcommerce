@@ -1,0 +1,62 @@
+﻿html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main, .body {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+
+
+
+#main-logo {
+    box-shadow: 0 0 2px 2px rgba(60, 60, 80, 0.15);
+    border-radius: 0 20% 0 10%;
+    background: linear-gradient(135deg, #f8f9fa 60%, #e3e3e5 100%);
+    transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: 1px double rgba(60, 60, 80, 0.15);
+}
+#brand-primary-color {
+    color: #5dade2;
+}
+
+#main-logo:hover {
+    transform: scale(1.07) rotate(-2deg);
+    box-shadow: 0 0 0px 5px #5dade294;
+}
+
+
+
+
+.product-table {
+    width: 100% !important;
+    position: relative;
+}
+
+    .product-table th,
+    .product-table td {
+        padding: 0.5rem 1rem !important;
+        vertical-align: middle;
+    }
+
+.product-table th {
+    position: sticky;
+    top: 0;
+    background: #212529; 
+    z-index: 2;
+    color: #fff;
+}
+

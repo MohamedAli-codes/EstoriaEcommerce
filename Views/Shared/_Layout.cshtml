@@ -1,0 +1,151 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estoria</title>
+    <link rel="icon" href="/images/mainIcon.jpeg" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/E_commerce.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm py-2  rounded-3">
+            <div class="container ">
+                <a class="navbar-brand d-flex align-items-center gap-2 " asp-area="" asp-controller="Home" asp-action="Index">
+                    <img id="main-logo" src="/images/mainIcon.jpeg" alt="Estoria Logo" class="me-1">
+                    <span class="fw-bold fs-5 " id="brand-primary-color">Estoria</span>
+                </a>
+
+                @* small screens bootrap nav menu btn *@
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                @* ------------ *@
+
+                <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+                    <ul class="navbar-nav me-auto  mb-2 mb-lg-0">
+                        <li class="nav-item ">
+                            <a class="nav-link  @(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" ? "txt fw-semibold" : "")" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>                        
+                        <li class="nav-item">
+                            <a class="nav-link  @(ViewContext.RouteData.Values["controller"]?.ToString() == "Store" ? "active fw-semibold" : "")" asp-area="" asp-controller="Store" asp-action="Index">Store</a>
+                        </li>
+                    </ul>
+
+                    @* drop down list to be displayed if user is authenticated and role based *@
+                    @* 1) inject userManager and signin Manager*@
+                    @using Microsoft.AspNetCore.Identity
+                    @inject UserManager<ApplicationUser> userManager;
+                    @inject SignInManager<ApplicationUser> signInManager;
+
+                    @* user deh property mwgoda fel view mn no3 claimPrincipal zy bta2a kda *@
+                    @if (signInManager.IsSignedIn(User))
+                    {
+                        var appUser = await userManager.GetUserAsync(User);
+
+                        @* gbt appUser 34an hst5dm m3lomat 3noh *@
+                        if (User.IsInRole("admin")) @* case sensetive *@
+                        {
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-dark d-flex align-items-center" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-person-circle me-1"></i> @(appUser!.FirstName + "(Admin)") @* using appuser *@
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" asp-controller="Product" asp-action="Index">Products</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Account" asp-action="Profile">Profile</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" asp-controller="Account" asp-action="Logout">Logout</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        }
+                        else if (User.IsInRole("client")) @* case sensetive *@
+                        {
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-dark d-flex align-items-center" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                        @(appUser!.FirstName + " " + appUser.LastName + "(client)") @* using appuser *@
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" asp-controller="Account" asp-action="Profile">Profile</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" asp-controller="Account" asp-action="Logout">Logout</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        }
+                        else
+                        {
+                            <ul class="navbar-nav ms-auto">
+                                <li><a class="dropdown-item" asp-controller="Account" asp-action="Logout">Logout</a></li>
+                            </ul>
+                        }
+                    }
+                    else
+                    {
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="btn btn-outline-secondary me-3" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-secondary" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                            </li>
+                        </ul>
+                    }
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    @if (ViewData["HomePage"] == null )
+    {
+        <div class="container body mt-3">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    }else
+    {
+		@RenderBody()
+    }
+
+    <footer class="footer mt-auto border-top bg-light text-secondary py-3">
+        <div class="container">
+            <div class="row align-items-center gy-3">
+                <div class="col-12 col-md-4 text-center text-md-start" id="brand-primary-color">
+                    <span class="d-inline-flex align-items-center gap-1">
+                        <img src="/images/mainIcon.jpeg" alt="Estoria Logo" width="48" height="48" style="border-radius:50%;object-fit:cover;">
+                        <span class="fw-bold fs-5 align-middle">Estoria</span>
+                    </span>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <small>
+                        <span id="brand-primary-color" >
+                            &copy; 2025 Estoria &mdash;
+                            <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-decoration-none s">Privacy</a>
+                        </span>
+                    </small>
+                </div>
+                <div class="col-12 col-md-4 text-center text-md-end">
+                    <a href="#" id="brand-primary-color" class="me-3" title="Facebook"><i class="bi bi-facebook fs-5"></i></a>
+                    <a href="#" id="brand-primary-color"  class="me-3" title="Twitter"><i class="bi bi-twitter-x fs-5"></i></a>
+                    <a href="#" id="brand-primary-color"  title="Instagram"><i class="bi bi-instagram fs-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

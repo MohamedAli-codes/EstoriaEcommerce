@@ -1,0 +1,137 @@
+﻿
+@model StoreSearchModel
+@{
+	ViewData["Title"] = "Estoria store";
+	int totalPages = (int)ViewData["totalPages"]!;
+	int pageIndex = (int)ViewData["pageIndex"]!;
+	string searchText = (string)ViewData["searchText"]!;
+	var brands = ViewBag.Brands as List<string>;
+	var categories = ViewBag.Categories as List<string>;
+	var selectedBrand = ViewData["brand"] as string;
+	var selectedCategory = ViewData["category"] as string;
+	List<Product> products = ViewBag.Products;
+}
+
+<h1 id="brand-primary-color" class="text-center ">Estoria products</h1>
+@* filter-sort - search functionality  *@
+<form class="row g-2 mb-3" > 
+	<div class="col-lg-2 col-md-4">
+		<select class="form-select" asp-for="Brand" onchange="this.form.submit()">
+			<option value="">All Brands</option>
+			@foreach (var b in brands)
+			{
+				if (b == selectedBrand)
+				{
+					<option value="@b" selected>@b</option>
+				}
+				else
+				{
+					<option value="@b">@b</option>
+				}
+			}
+		</select>
+	</div>
+	<div class="col-lg-2 col-md-12 d-flex">
+		<select class="form-select" asp-for="Category" onchange="this.form.submit()">
+			<option value="">All Categories</option>
+			@foreach(var category in categories)
+			{
+				if (category== selectedCategory)
+				{
+					<option selected value="@category">@category</option>
+				}else
+				{
+					<option value="@category">@category</option>
+				}
+			}
+		</select>
+	</div>
+	<div class="col-lg-2 col-md-4 ">
+		<select class="form-select" asp-for="Sort"  onchange="this.form.submit()">
+			<option value="">-- sort --</option>
+			<option value="Newest">Latest products</option>
+			<option value="Price_asc">Price: Low to High</option>
+			<option value="Price_desc">Price: High to Low </option>
+		</select>
+	</div> 
+	<div class="col-lg-6 col-md-12">
+		<div class="input-group">
+			<input class="form-control" type="search" placeholder="Search" aria-label="Search" asp-for="SearchText">
+			<button class="btn btn-outline-success" type="submit">Search</button>
+			<button class="btn btn-outline-danger" type="button" onclick="clearSearch(this)">Clear</button>
+		</div>
+	</div>
+</form>
+
+
+
+
+<div class="bg-light" >
+	<div class="container">
+		<hr id="brand-primary-color"/>
+
+		@* pagination functionality *@
+		@* need max no of pages / pageindex *@
+		<nav class="my-2">
+			<ul class="pagination justify-content-center">
+				<li class="page-item @(pageIndex<=1 ? "disabled": "")"><a class="page-link" asp-controller="store" asp-action="index" asp-route-pageIndex="@(pageIndex > 1 ? pageIndex -1 : 1)" asp-route-searchText="@Model.SearchText" asp-route-brand="@Model.Brand" asp-route-category="@Model.Category" asp-route-sort="@Model.Sort">Previous</a></li>
+				@{
+					for (int i = 1; i <= totalPages; i++)
+					{
+						<li class="page-item @(i==pageIndex? "active" : "")">
+							<a class="page-link " asp-controller="store" asp-action="index" asp-route-pageIndex=@i asp-route-searchText="@Model.SearchText" asp-route-brand="@Model.Brand" asp-route-category="@Model.Category" asp-route-sort="@Model.Sort">@i</a>
+						</li>
+					}
+				}
+				<li class="page-item @(pageIndex>=totalPages? "disabled" :"" )"><a class="page-link" asp-controller="store" asp-action="index" asp-route-pageIndex="@(pageIndex < totalPages ? pageIndex+1 : totalPages)" asp-route-searchText="@Model.SearchText" asp-route-brand="@Model.Brand" asp-route-category="@Model.Category" asp-route-sort="@Model.Sort">Next</a></li>
+			</ul>
+		</nav>
+
+		<div class="row mb-5 g-3">
+			@foreach (var product in products)
+			{
+				<div class="col-lg-3 col-md-6">
+					<div class="rounded border shadow p-3 text-center h-100 d-flex flex-column">
+						<img src="@product.ImageUrl" class="card-img-top" alt="@product.Name" style="height:180px; object-fit:contain">
+						<div class="card-body d-flex flex-column">
+							<h5 class="card-title">@product.Name</h5>
+							<hr />
+							<h6 class="card-text "><strong>Brand: </strong>@product.Brand</h6>
+							<h6 class="card-text"><strong>Category: </strong>@product.Category</h6>
+							<p class="card-text"><strong>Price: </strong>@product.Price.ToString("C")</p>
+
+							<!-- Side-by-side buttons pushed to bottom -->
+							<div class="mt-auto d-flex justify-content-between gap-2">
+								<a asp-controller="Store" asp-action="Details" asp-route-id="@product.Id" class="btn btn-primary flex-fill">
+									Details
+								</a>
+								<a href="@Url.Action("AddToCart", "Cart", new { id = product.Id })" class="btn btn-warning flex-fill">
+									<i class="bi bi-cart4"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+</div>
+
+
+@section scripts{
+	<script>
+		function clearSearch(btn){
+			// Find the form containing the button
+			const form = btn.form;
+			// Find the search input (by name or asp-for value)
+			const searchInput = form.querySelector('[name="SearchText"]');
+			if (searchInput.value) {
+				searchInput.value = '';
+				form.submit();
+			}
+			else
+				btn.blur();
+		}
+	</script>
+
+}

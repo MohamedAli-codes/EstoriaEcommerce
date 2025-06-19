@@ -1,0 +1,19 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<form asp-action="delete" asp-route-id="@Model.Id" method="post">
+    <div class="d-flex gap-2">
+        <label>Are you sure you want to delete the product?</label>
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" id="confirmDelete" required />
+			<label class="form-check-label" for="confirmDelete">Yes, I confirm</label>
+		</div>
+        <input class="btn btn-danger" type="submit" value="submit"/>
+        <a class="btn btn-dark text-light" asp-controller="product" asp-action="index">Back to Products</a>
+    </div>
+</form>
+

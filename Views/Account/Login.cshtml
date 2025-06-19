@@ -1,0 +1,61 @@
+﻿@model LoginDTO
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="row">
+    <div class="col-lg-4 mx-auto rounded border  p-4 bg-light">
+        <h3 class="text-center mb-3" id="brand-primary-color">Please Login</h3>
+        <hr id="brand-primary-color" />
+        @* <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div> //method2*@
+        @if (ViewBag.ErrorMessages != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>@ViewBag.ErrorMessages</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                </button>
+            </div>
+        }
+
+        <form method="post">
+            <div class="row mb-3">
+                <label asp-for="Email" class="form-label "></label>
+                <div >
+                    <input class="form-control" asp-for="Email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label asp-for="Password" class="form-label"></label>
+                <div >
+                    <input class="form-control" type="password" asp-for="Password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" checked asp-for="RememberMe" />
+                <label asp-for="RememberMe" class="form-check-label"></label>
+            </div>
+
+            <div class="row mb-3 ">
+                <div class="col d-grid">
+                    <button type="submit" class="btn btn-primary">Log In</button>
+                </div>
+                <div class="col d-grid">
+                    <a asp-controller="home" asp-action="index" class="btn btn-outline-primary" role="button">Cancel</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <a class="btn btn-link"  asp-controller="Account" asp-action="ForgetPassword" >Forgot your password?</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

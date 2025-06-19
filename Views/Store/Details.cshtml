@@ -1,0 +1,43 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="row ">
+    <div class="col-lg-4 text-center">
+        <img class="img-fluid mb-3" src="@Model.ImageUrl" alt="..." width="250"/>
+    </div>
+    <div class="col-lg-8">
+        <h3 class="mb-3">@Model.Name</h3>
+        <h3 class="mb-3">@(Model.Price) $</h3>
+        <a href="#" class="btn btn-warning">
+            Add to Cart <i class="bi bi-cart4"></i>
+        </a>
+
+        <hr />
+        <div class="row mb-3">
+            <div class="col-sm-3 fw-bold">
+                Brand
+            </div>
+            <div class="col-sm-9">
+                @Model.Brand
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-sm-3 fw-bold">
+                Category
+            </div>
+            <div class="col-sm-9">
+                @Model.Category
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="mb-0 fw-bold">Description:</div>
+            <p style="white-space: pre-line"> 
+                @* //34an el paragraphs mtlz24 fe b3dha *@
+                @Model.Description
+            </p>
+        </div>
+
+    </div>
+</div>

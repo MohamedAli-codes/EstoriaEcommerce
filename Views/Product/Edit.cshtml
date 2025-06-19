@@ -1,0 +1,76 @@
+﻿@model ProductDto
+@{
+    ViewData["Title"] = "Edit product";
+}
+
+<h1 class="mb-4">Update product Product</h1>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <form asp-controller="product" asp-action="edit"  method="post" enctype="multipart/form-data">
+
+            <div class="mb-3">
+                <label class="form-label fw-bold" >Product Id</label>
+                <input class="form-control" readonly value="@ViewData["productId"]" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold" asp-for="@Model.Name"></label>
+                <input class="form-control" asp-for="@Model.Name" />
+                <span class="text-danger" asp-validation-for="@Model.Name"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold" asp-for="@Model.Brand"></label>
+                <input class="form-control" asp-for="@Model.Brand" />
+				<span class="text-danger" asp-validation-for="@Model.Brand"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold" asp-for="@Model.Category"></label>
+                <select asp-for="@Model.Category">
+					<option value="@Model.Category">@Model.Category</option>
+					<option value="phones">phones</option>
+                    <option value="computers">computers</option>
+                    <option value="accessories">accessories</option>
+                    <option value="printers">printers</option>
+                    <option value="other">other</option>
+                </select>
+                <span class="text-danger" asp-validation-for="@Model.Category"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold" asp-for="@Model.Price"></label>
+                <input class="form-control" asp-for="@Model.Price" />
+				<span class="text-danger" asp-validation-for="@Model.Price"></span>
+            </div>
+
+            <div class="mb-3 text-center">
+                <img src="@ViewData["productImage"]" width="150" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold" asp-for="@Model.ImageFile"></label>
+                <input class="form-control" asp-for="@Model.ImageFile" type="file" />
+				<span class="text-danger" asp-validation-for="@Model.ImageFile"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold">creation date</label>
+                <input class="form-control" readonly value="@ViewData["createdAt"]" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold" asp-for="@Model.Description"></label>
+                <textarea class="form-control" asp-for="@Model.Description"></textarea>
+				<span class="text-danger" asp-validation-for="@Model.Description"></span>
+            </div>
+
+            <div class="d-flex gap-2">
+                <input class="btn btn-success" type="submit" value="update product" />
+                <a class="btn btn-dark text-light" asp-controller="product" asp-action="index">Back to Products</a>
+            </div>
+        </form>
+    </div>
+</div>
+

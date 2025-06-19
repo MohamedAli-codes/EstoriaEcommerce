@@ -1,0 +1,60 @@
+﻿@model List<Product>
+
+@{
+    ViewData["Title"] = "Home Page";
+    ViewData["HomePage"] = true;
+}
+
+<div style="background-color:#3196d0">
+    <div class="container text-white py-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1>Enjoy your shopping Estoria!
+                    <span style="color:#3196d0"></span>
+                </h1>
+                <p>
+                    Find a large selection of latest release products from the most popular
+                    brands with affordable prices.
+                </p>
+            </div>
+
+            <div class="col-md-6 text-center">
+                <img src="/images/HomeBackgroundimage.png" class="img-fluid" alt="hero"  />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-light">
+    <div class="container py-4">
+        <h2 id="brand-primary-color" class="text-center mb-4">Latest Products</h2>
+        <div class="row mb-5 g-3">
+            @foreach(var product in Model)
+            {
+				/* Display each product in a card for large screen width for card
+				= > col-lg-3 12/3-->4cards  for medium screen col-md-6 --> 2 cards
+				*/
+                <div class="col-lg-3 col-md-6"> 
+                    <div class="rounded border shadow p-3 text-center h-100 ">
+						<img src="@product.ImageUrl" class="img-fluid mb-3" alt="@product.Name" style="height:180px; object-fit:contain"/>
+                        <hr />
+						<h5 class="mb-3">@product.Name</h5>
+                        <p>
+                            Brand: @product.Brand , Category: @product.Category
+                        </p>
+                        <h4 class="mb-4">@(product.Price)$</h4>
+                        <div>
+                                     <a asp-controller="Store" asp-action="Details" asp-route-id="@product.Id" class="btn btn-primary">
+								Details
+							</a>
+							<a href="@Url.Action("AddToCart", "Cart", new { id = product.Id })" class="btn btn-warning">
+                                         Add to Cart <i class="bi bi-cart4"></i>
+							</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

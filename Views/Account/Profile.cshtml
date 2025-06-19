@@ -1,0 +1,141 @@
+﻿@model ProfileDTO
+@{
+    ViewData["Title"] = "Profile";
+    ApplicationUser appUser = ViewBag.AppUser;  // used in filling the form
+    IList<string> userRoles=ViewBag.UserRoles;
+}
+
+
+<div class="row">
+    <div class="col-md-8 bg-light mx-auto rounded border p-4  ">
+        <h1 id="brand-primary-color" class="mb-3">Profile</h1>
+        <hr />
+        @if (ViewBag.ErrorMessages != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>@ViewBag.ErrorMessages</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                </button>
+            </div>
+
+        }
+        @if (ViewBag.SuccessMessages != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>@ViewBag.SuccessMessages</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                </button>
+            </div>
+        }
+
+        <div class="row mb-2">
+            <div class="col-4 fw-bolder text-secondary">First Name</div>
+            <div class="col-8">@appUser.FirstName</div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-4 fw-bolder text-secondary">Last Name</div>
+            <div class="col-8">@appUser.LastName</div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4 fw-bolder text-secondary">Email</div>
+            <div class="col-8">@appUser.Email</div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4 fw-bolder text-secondary">Phone Number</div>
+            <div class="col-8">@(appUser.PhoneNumber == null ? "you have not added phone number yet." : appUser.PhoneNumber)</div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4 fw-bolder text-secondary">Address</div>
+            <div class="col-8">
+                @(string.IsNullOrWhiteSpace(appUser.Address) ? "No address provided." : appUser.Address)
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4 fw-bolder text-secondary">Roles</div>
+            <div class="col-8">
+                @(userRoles != null && userRoles.Count > 0 ? string.Join(", ", userRoles) : "No roles assigned")
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4 fw-bolder text-secondary">Created At</div>
+            <div class="col-8">@appUser.CreatedAt.ToString("yyyy-MM-dd HH:mm")</div>
+        </div>
+        <hr>
+        <div class="row mt-3">
+            <div class="d-flex gap-3">
+                <button type="button" class="btn btn-primary btn-sm col-sm-2" data-bs-toggle="modal" data-bs-target="#editProfileModal">Edit Profile</button>
+                <a class="btn btn-secondary btn-sm col-sm-2" asp-controller="Account" asp-action="Password">Edit Password</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Profile Modal -->
+<div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post">
+                    <div class="row mb-3">
+                        <label class="col-sm-4 col-form-label" asp-for="FirstName"></label>
+                        <div class="col-sm-8">
+                            <input class="form-control" asp-for="FirstName" />
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label asp-for="LastName" class="col-sm-4 col-form-label"></label>
+                        <div class="col-sm-8">
+                            <input class="form-control" asp-for="LastName" />
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label asp-for="Email" class="col-sm-4 col-form-label"></label>
+                        <div class="col-sm-8">
+                            <input class="form-control" asp-for="Email" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label asp-for="PhoneNumber" class="col-sm-4 col-form-label"></label>
+                        <div class="col-sm-8">
+                            <input class="form-control" asp-for="PhoneNumber" />
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label asp-for="Address" class="col-sm-4 col-form-label"></label>
+                        <div class="col-sm-8">
+                            <input class="form-control" asp-for="Address" />
+                            <span asp-validation-for="Address" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <hr />
+                    <div class="row mb-3 mt-3 g-3">
+                        <div class="offset-sm-4 col-sm-4 d-grid">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                        <div class="col-sm-4 d-grid">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
