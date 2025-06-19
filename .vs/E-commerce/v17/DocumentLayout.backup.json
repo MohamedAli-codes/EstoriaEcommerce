@@ -47,9 +47,9 @@
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\appsettings.json*",
-              "RelativeToolTip": "appsettings.json*",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
+              "ToolTip": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-06-16T12:12:13.444Z",
               "EditorCaption": ""
@@ -62,7 +62,7 @@
               "RelativeDocumentMoniker": "Services\\SendEmail.cs",
               "ToolTip": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\Services\\SendEmail.cs",
               "RelativeToolTip": "Services\\SendEmail.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAuwBcAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwBYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-16T11:58:58.3Z",
               "EditorCaption": ""
@@ -75,7 +75,7 @@
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
               "ToolTip": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAoBAAAAAAAAAAAiwBIBAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAoBAAAAAAAAAAAiwBABAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-16T08:56:47.069Z",
               "EditorCaption": ""

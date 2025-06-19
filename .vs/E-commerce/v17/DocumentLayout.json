@@ -38,8 +38,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAAwB8AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T13:19:50.365Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T13:19:50.365Z"
             },
             {
               "$type": "Document",
@@ -51,8 +50,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-16T12:12:13.444Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T12:12:13.444Z"
             },
             {
               "$type": "Document",
@@ -62,7 +60,7 @@
               "RelativeDocumentMoniker": "Services\\SendEmail.cs",
               "ToolTip": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\Services\\SendEmail.cs",
               "RelativeToolTip": "Services\\SendEmail.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAuwBYAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA+wBkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-16T11:58:58.3Z",
               "EditorCaption": ""
@@ -77,8 +75,7 @@
               "RelativeToolTip": "Controllers\\AccountController.cs",
               "ViewState": "AgIAAAoBAAAAAAAAAAAiwBABAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T08:56:47.069Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T08:56:47.069Z"
             }
           ]
         }
