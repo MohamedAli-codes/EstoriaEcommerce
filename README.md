@@ -36,7 +36,7 @@ Not deployed yet — screenshots available below. Live version coming soon.
 > *(Save your images in a `screenshots/` folder and push them to GitHub)*
 
 ### Admin CRUD
-![Admin Panel](screenshots/AdminCrud.png)
+![Admin Panel](screenshots/AdminCRUD.png.png)
 
 ### Store Page
 ![Store Page](screenshots/StorePage.png)
