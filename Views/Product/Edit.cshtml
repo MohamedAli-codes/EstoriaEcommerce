@@ -20,21 +20,26 @@
                 <span class="text-danger" asp-validation-for="@Model.Name"></span>
             </div>
 
+
+            <div class="mb-3">
+                <label class="form-label fw-bold" asp-for="@Model.Stock"></label>
+                <input class="form-control" asp-for="@Model.Stock" />
+                <span class="text-danger" asp-validation-for="@Model.Stock"></span>
+            </div>
+
             <div class="mb-3">
                 <label class="form-label fw-bold" asp-for="@Model.Brand"></label>
                 <input class="form-control" asp-for="@Model.Brand" />
-				<span class="text-danger" asp-validation-for="@Model.Brand"></span>
+                <span class="text-danger" asp-validation-for="@Model.Brand"></span>
             </div>
 
             <div class="mb-3">
                 <label class="form-label fw-bold" asp-for="@Model.Category"></label>
                 <select asp-for="@Model.Category">
-					<option value="@Model.Category">@Model.Category</option>
-					<option value="phones">phones</option>
-                    <option value="computers">computers</option>
-                    <option value="accessories">accessories</option>
-                    <option value="printers">printers</option>
-                    <option value="other">other</option>
+                    @foreach(var category in ViewBag.Categories)
+                    {
+                        <option value="@category">@category</option>
+                    }
                 </select>
                 <span class="text-danger" asp-validation-for="@Model.Category"></span>
             </div>

@@ -24,74 +24,115 @@
 }
 
 
+<h3 class="h4 mb-0">Products List</h3>
+<hr />
+<div class="row align-items-center mb-3">
+    <!-- Add Product Button -->
+    <div class="col-md-3 mb-2 mb-md-0">
+        <a asp-controller="product" asp-action="create" class="btn btn-primary w-100">Add Product</a>
+    </div>
 
-<div class="row mb-4 align-items-center g-2">
-    <div class="col-12 col-md-3 text-center text-md-start">
-        <h1 class="h4 mb-0">Products List</h1>
-    </div>
-    <div class="col-12 col-md-3 text-center text-md-start">
-        <a class="btn btn-primary w-100 w-md-auto" asp-controller="product" asp-action="create">Add Product</a>
-    </div>
-    <div class="col-12 col-md-6">
-        <form class="d-flex gap-2 flex-wrap justify-content-center justify-content-md-end">
-            <input class="form-control" type="search" placeholder="Search" name="search" value="@search" aria-label="Search" style="min-width: 200px; max-width: 350px;">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-            <button class="btn btn-outline-danger" type="button" onclick="clearSearch()">Clear</button>
+    <!-- Search Box -->
+    <div class="col-md-6">
+        <form class="d-flex" method="get">
+            <div class="input-group w-100">
+                <input type="search" name="search" value="@search"
+                       class="form-control rounded-0 @(string.IsNullOrEmpty(search) ? "" : "backGround-main")"
+                       placeholder="Search" />
+                <button class="btn btn-outline-success rounded-0" type="submit">Search</button>
+                <button class="btn btn-outline-danger rounded-0" type="button" onclick="clearSearch()">Clear</button>
+            </div>
         </form>
     </div>
 </div>
 
-
-<table class="table table-bordered table-hover table-striped table-sm align-middle shadow rounded product-table">
-    <thead class="table-dark text-light text-center">
-        <tr>
-            <th style="cursor: pointer" onclick="sortTable('Id')">Product ID @GetArrow("Id")</th>
-            <th style="cursor: pointer" onclick="sortTable('Name')">Name @GetArrow("Name")</th>
-            <th style="cursor: pointer" onclick="sortTable('Brand')">Brand @GetArrow("Brand")</th>
-            <th style="cursor: pointer" onclick="sortTable('Category')">Category @GetArrow("Category")</th>
-            <th style="cursor: pointer" onclick="sortTable('Price')">Price @GetArrow("Price")</th>
-            <th >Image</th>
-            <th style="cursor: pointer" onclick="sortTable('creationDate')">Creation Date @GetArrow("creationDate")</th>
-            <th >Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var product in Model)
-        {
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-striped table-sm align-middle shadow rounded product-table">
+        <thead class="table-dark text-light text-center">
             <tr>
-                <td>@product.Id</td>
-                <td>@product.Name</td>
-                <td class="text-center">@product.Brand</td>
-                <td class="text-center" >@product.Category</td>
-                <td>@product.Price.ToString("C")</td>
-                <td class="text-center">
-                    <img src="@product.ImageUrl" alt="@($"{product.Name} image")" height="80" width="100" />
-                </td>
-                <td>@product.CreatedAt.ToString("d")</td>
-                <td>
-                    <div class="d-flex gap-2">
-                        <a class="btn btn-info btn-sm" asp-controller="product" asp-route-id="@product.Id" asp-action="detail">Details</a>
-                        <a class="btn btn-secondary btn-sm" asp-controller="product" asp-route-id="@product.Id" asp-action="Edit">Edit</a>
-                        <a class="btn btn-danger btn-sm" asp-controller="product" asp-route-id="@product.Id" asp-action="delete">Delete</a>
-                    </div>
-                </td>
+                <th style="cursor: pointer" onclick="sortTable('Id')">Product ID @GetArrow("Id")</th>
+                <th style="cursor: pointer" onclick="sortTable('Name')">Name @GetArrow("Name")</th>
+                <th style="cursor: pointer" onclick="sortTable('Brand')">Brand @GetArrow("Brand")</th>
+                <th style="cursor: pointer" onclick="sortTable('Category')">Category @GetArrow("Category")</th>
+                <th style="cursor: pointer" onclick="sortTable('Price')">Price @GetArrow("Price")</th>
+                <th >Image</th>
+                <th style="cursor: pointer" onclick="sortTable('creationDate')">Creation Date @GetArrow("creationDate")</th>
+                <th >Actions</th>
             </tr>
-        }
-    </tbody>
-</table>
-
-
-<nav class="pagination text-center" aria-label="Product pagination">
-    <ul class="pagination pagination-sm">
-        @for (int i = 1; i <= totalPages; i++)
-        {
-            <li class="page-item @(i == pageIndex ? "active" : "")">
-                <a class="page-link" asp-route-pageIndex= "@i" asp-route-search="@search"
-                asp-route-column="@column" asp-route-orderBy="@orderBy" >@i</a>
+        </thead>
+        <tbody class="text-center">
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td >@product.Id</td>
+                    <td class="text-start ps-2">@product.Name</td>
+                    <td >@product.Brand</td>
+                    <td >@product.Category</td>
+                    <td >@product.Price.ToString("C")</td>
+                    <td >
+                        <img src="@product.ImageUrl" alt="@($"{product.Name} image")" height="80" width="100" />
+                    </td>
+                    <td>@product.CreatedAt.ToString("d")</td>
+                    <td >
+                        <div class="d-flex justify-content-center gap-2">
+                            <button class="btn btn-info btn-sm view-details-btn" data-id="@product.Id">
+                               Details
+                            </button>
+                            <a class="btn btn-secondary btn-sm" asp-controller="product" asp-route-id="@product.Id" asp-action="Edit">Edit</a>
+                            <a class="btn btn-danger btn-sm" asp-controller="product" asp-route-id="@product.Id" asp-action="delete">Delete</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <!-- Pagination -->
+    <nav class="d-flex justify-content-center mt-4">
+        <ul class="pagination pagination-sm mb-0 shadow-sm rounded-pill bg-light px-2">
+            <li class="page-item @(pageIndex <= 1 ? "disabled" : "")">
+                <a class="page-link" asp-action="index" asp-route-pageIndex="@(pageIndex - 1)" asp-route-search="@search" asp-route-column="@column" asp-route-orderBy="@orderBy">Prev</a>
             </li>
-        }
-    </ul>
-</nav>
+            @for (int i = 1; i <= totalPages; i++)
+            {
+                <li class="page-item @(i == pageIndex ? "active" : "")">
+                    <a class="page-link px-3 py-1 rounded-pill mx-1" style="transition: all 0.2s;"
+                       asp-route-pageIndex="@i"
+                       asp-route-search="@search"
+                       asp-route-column="@column"
+                       asp-route-orderBy="@orderBy">@i</a>
+                </li>
+            }
+            <li class="page-item @(pageIndex >= totalPages ? "disabled" : "")">
+                <a class="page-link" asp-action="index" asp-route-pageIndex="@(pageIndex + 1)" asp-route-search="@search" asp-route-column="@column" asp-route-orderBy="@orderBy">Next</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+<!-- Spinner (initially hidden) -->
+<div id="spinner-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(255,255,255,0.7); z-index:1050;">
+    <div class="d-flex justify-content-center align-items-center" style="height:100%;">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</div>
+
+<!-- Details Modal -->
+<div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="detailsModalLabel">Product Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+</div>
 
 
 @section Scripts {
@@ -108,9 +149,27 @@
                 else
                     orderBy="asc";
             }
-
             window.location.href = "?search=@search&column="+ column+"&orderBy="+orderBy;
         }
+
+               $(document).ready(function () {
+            $(".view-details-btn").click(function () {
+                var id = $(this).data("id");
+
+                // Clear old content and show spinner
+                $("#modalBody").html("");
+                $("#spinner").show();
+
+                // Load partial view into modal body
+                $.get("/Admin/Product/ProductDetailsPartial/" + id, function (data) {
+                    setTimeout(function () {
+                        $("#modalBody").html(data);       // Inject content
+                        $("#spinner").hide();              // Hide spinner
+                        $("#detailsModal").modal("show");  // Show modal
+                    }, 400); // delay in milliseconds (adjust as needed)
+                });
+            });
+        });
 
         function clearSearch() {
             // Redirect with only sorting and pagination, no search

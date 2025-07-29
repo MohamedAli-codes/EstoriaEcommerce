@@ -1,0 +1,191 @@
+﻿@model Order
+@{
+    ViewData["Title"] = "Details";
+    string orderStatusBadgeColor = "bg-danger";
+    string paymentBadgeColor = "bg-danger";
+    decimal subtotal = 0;
+    @switch (Model.OrderStatus.ToLower())
+    {
+        case "created":
+            orderStatusBadgeColor = "bg-warning text-black";
+            break;
+        case "accepted":
+            orderStatusBadgeColor = "bg-dark";
+            break;
+        case "canceled":
+            orderStatusBadgeColor = "bg-secondary";
+            break;
+        case "shipped":
+            orderStatusBadgeColor = "bg-primary";
+            break;
+        case "delivered":
+            orderStatusBadgeColor = "bg-success";
+            break;
+        case "returned":
+            orderStatusBadgeColor = "bg-info text-dark";
+            break;
+        case "deleted":
+            orderStatusBadgeColor = "bg-dark";
+            break;
+    }
+    @switch (Model.PaymentStatus.ToLower())
+    {
+        case "pending":
+            paymentBadgeColor = "bg-warning text-black";
+            break;
+        case "accepted":
+            paymentBadgeColor = "bg-success";
+            break;
+        case "canceled":
+            paymentBadgeColor = "bg-secondary";
+            break;
+
+    }
+}
+
+<h3 class="text-center ">Order Details</h3>
+<a asp-action="Index" asp-controller="AdminOrders" class="btn btn-link">Orders</a>
+
+<div class="row mb-4">
+    <div class="col-lg-6">
+        <div class="border border-3 hover rounded px-3 py-2 h-100 bg-light">
+            <h3 class="text-center">Order</h3>
+            <hr />
+            <div class="row mb-2 pb-2 border-bottom">
+                <div class="col fw-bolder ms-5">Order Id</div>
+                <div class="col">@Model.Id</div>
+            </div>
+
+            <div class="row mb-2 pb-2 border-bottom">
+                <div class="col fw-bolder ms-5">Created At</div>
+                <div class="col">@Model.CreatedAt</div>
+            </div>
+
+            <div class="row mb-2 pb-2 border-bottom">
+                <div class="col fw-bolder ms-5">Delivery Address</div>
+                <div class="col">@Model.DeliveryAddress</div>
+            </div>
+
+            <div class="row mb-2 pb-2 border-bottom">
+                <div class="col fw-bolder ms-5">Order Status</div>
+                <div class="col">
+                    <span class="badge @orderStatusBadgeColor">@Model.OrderStatus</span>
+                    <a href="#"  class="mx-2" data-bs-toggle="modal" data-bs-target="#EditOrderStatus">
+                        Edit
+                    </a>
+                </div>
+            </div>
+
+            <div class="row mb-2 pb-2  border-bottom">
+                <div class="col fw-bolder ms-5">Payment Status</div>
+                <div class="col">
+                    <span class="badge @paymentBadgeColor">@Model.PaymentStatus</span>
+                    <a href="#" class="mx-2" data-bs-toggle="modal" data-bs-target="#EditPaymentStatus">
+                        Edit
+                    </a>
+                </div>
+            </div>
+
+            <div class="row mb-2 pb-2 border-bottom">
+                <div class="col fw-bolder ms-5">Payment Method</div>
+                <div class="col">@Model.PaymentMethod</div>
+            </div>
+
+            <div class="row mb-2 pb-2 ">
+                <div class="col fw-bolder ms-5">Payment Details</div>
+                <div class="col">@Model.PaymentDetails</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="border border-3 rounded px-3 py-2 h-100 bg-light">
+            <h3 class="text-center">Client</h3>
+            <hr />
+            <div class="row mb-2 pb-2 border-bottom">
+                <div class="col fw-bolder ms-5">Name</div>
+                <div class="col">@(Model.Client.FirstName + " " + Model.Client.LastName)</div>
+            </div>
+
+            <div class="row border-bottom mb-2 pb-2">
+                <div class="col ms-5 fw-bolder">Email</div>
+                <div class="col">@Model.Client.Email</div>
+            </div>
+
+            <div class="row border-bottom mb-2 pb-2">
+                <div class="col ms-5 fw-bolder">Address</div>
+                <div class="col">@Model.Client.Address</div>
+            </div>
+
+            <div class="row border-bottom mb-2 pb-2">
+                <div class="col ms-5 fw-bolder">Phone Number</div>
+                <div class="col">@Model.Client.PhoneNumber</div>
+            </div>
+
+
+            <div class="row border-bottom mb-2 pb-2">
+                <div class="col ms-5 fw-bolder">Client total orders</div>
+                <div class="col">@ViewBag.ClientOrders</div>
+            </div>
+
+            <div class="row  mb-2 pb-2">
+                <div class="col ms-5 fw-bolder">Account creation date</div>
+                <div class="col">@Model.Client.CreatedAt</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="col-12 mx-auto table-responsive">
+    <table class="table table-hover text-center">
+        <thead class="bg-light">
+            <tr>
+                <th style="width:150px">Description</th>
+                <th></th>
+                <th style ="width:100px">Units</th>
+                <th style="width:100px">Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                subtotal += (item.UnitPrice * item.Quantity);
+                <tr>
+                    <td><img src="@item.Product.ImageUrl" width="100" alt="..." /></td>
+                    <td class="text-start">
+                        <h4>@item.Product.Name</h4>
+                        <p class="ms-3">
+                            @item.Product.Category |
+                            @item.Product.Price $
+                        </p>
+                    </td>
+                    <td>@item.Quantity</td>
+                    <td>@(item.UnitPrice * item.Quantity) $</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="ms-auto mb-3" style="width:250px">
+    <div class="row">
+        <div class="col fw-bold">Subtotal:</div>
+        <div class="col text-end">@(subtotal) $</div>
+    </div>
+
+        <div class="row">
+        <div class="col fw-bold">Shipping Fee:</div>
+        <div class="col text-end">@(Model.ShippingFee) $</div>
+    </div>
+
+    <div class="row">
+        <div class="col fw-bold">Total:</div>
+        <div class="col text-end">@(subtotal + Model.ShippingFee) $</div>
+    </div>
+</div>
+
+
+
+<partial name="EditPartialView"/>

@@ -1,6 +1,8 @@
 ﻿@model Product
 @{
     ViewData["Title"] = "Details";
+    string stockAvailablity = "";
+    string stockAvailablityStyle = "";
 }
 
 <div class="row ">
@@ -10,10 +12,26 @@
     <div class="col-lg-8">
         <h3 class="mb-3">@Model.Name</h3>
         <h3 class="mb-3">@(Model.Price) $</h3>
-        <a href="#" class="btn btn-warning">
-            Add to Cart <i class="bi bi-cart4"></i>
-        </a>
-
+        @{
+            switch (Model.Stock)
+            {
+                case 0:
+                    stockAvailablity = "Out of stock";
+                    stockAvailablityStyle = "out-of-stock";
+                    break;
+                case < 10:
+                    stockAvailablity = "Low stock Hurry up!";
+                    stockAvailablityStyle = "low-stock";
+                    break;
+                default:
+                    stockAvailablity = "";
+                    stockAvailablityStyle = "";
+                    break;
+            }
+        }
+        <button @(Model.Stock == 0 ? "disabled" : "") type="button" class="btn btn-warning px-5 flex-will  @(stockAvailablityStyle== "out-of-stock" ? "out-of-stock" :"")" onclick="addToCart(this,@Model.Id,@Model.Stock)">
+            <i class="bi bi-cart4"></i>
+        </button>
         <hr />
         <div class="row mb-3">
             <div class="col-sm-3 fw-bold">

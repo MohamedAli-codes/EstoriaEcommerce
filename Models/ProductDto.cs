@@ -13,6 +13,8 @@ namespace E_commerce.Models
         [Required,MaxLength(100)]
         public string Category { get; set; } = string.Empty;
         [Required]
+        public int Stock { get; set; } 
+        [Required]
         public decimal Price { get; set; }
         [Required]
         public string? Description { get; set; }

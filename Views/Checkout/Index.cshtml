@@ -1,0 +1,97 @@
+﻿@{
+
+}
+
+<script src="https://www.paypal.com/sdk/js?client-id=@(ViewBag.ClientId)&currency=USD"></script>
+<div class="mx-auto mt-4 rounded border bg-light p-4 show col-lg-4" >
+    @if (ViewBag.ErrorMessages != null)
+    {
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>@ViewBag.ErrorMessages</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    <h2 class="text-center">Complete your order</h2>
+    <hr />
+    <div class="p-2">
+        <p >
+            <span>Total amount: </span>
+            <span class="fw-bolder">@(ViewBag.Total) $</span>
+        </p>
+        <p>
+            <span>Delivery Address: </span>
+            <span class="fw-bolder">@(ViewBag.DeliveryAddress)</span>
+        </p>
+    </div>
+
+    <br />
+    <div id="notificaiton-container"></div>
+    <div id="paypal-button-container"></div>
+    <hr />
+    <div  >
+        <a asp-controller="Cart" asp-action="Index" class="btn btn-outline-secondary d-block ">Back</a>
+    </div>
+</div>
+
+    
+<script>
+    paypal.Buttons({
+        async createOrder() {
+            const response = await fetch("@Url.ActionLink("CreateOrder","Checkout")", {
+                method: "POST"
+            });
+
+            const order = await response.json();
+
+            return order.id;
+        },
+
+        async onApprove(data) {
+        // Capture the funds from the transaction.
+        const response = await fetch( "@Url.ActionLink("CompleteOrder", "Checkout")" ,{
+          method: "POST",
+           headers: {
+                    "Content-Type": "application/json",
+                },
+          body: JSON.stringify({
+            orderID: data.orderID,
+            deliveryAddress: "@ViewBag.DeliveryAddress"
+          })
+        })
+
+            const details = await response.json();
+
+            if(details=="success"){
+                                document.getElementById("notificaiton-container").innerHTML=
+                    `<div class="alert alert-success alert-dismissible fade show" role="alert">
+                      <strong>The order is created successfully!</strong>
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>`;
+            }else{
+                                document.getElementById("notificaiton-container").innerHTML=
+                    `<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                      <strong>Failed to create the order!</strong>
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>`;
+            }
+        
+        },
+
+        onCancel(data){
+                document.getElementById("notificaiton-container").innerHTML=
+                `<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <strong>Payment Canceled!</strong>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>`;
+        },
+        
+        onError(err){
+            document.getElementById("notificaiton-container").innerHTML=
+                `<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <strong>An error occured! please try again later.</strong>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>`;
+        }
+    }).render('#paypal-button-container');
+</script>
+

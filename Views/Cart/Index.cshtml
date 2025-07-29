@@ -1,0 +1,136 @@
+﻿@using Microsoft.AspNetCore.Identity
+@* ViewBag.CartItems = cartItems; *@
+@* ViewBag.SubTotal = subTotal; *@
+@* ViewBag.ShippingFee = shippingFee; *@
+@* ViewBag.Total = subTotal+shippingFee; *@
+@{
+    ViewData["Title"] = "Cart";
+    List<OrderItem> orderItems = ViewBag.CartItems;
+}
+@model CheckOutDTO
+
+<div class="row border rounded-3 bg-light border-2 p-3">
+    <div class="col-md-8 table-responsive">
+        <h4 id="brand-primary-color">Shopping Cart</h4>
+        <hr />
+        @if (ViewBag.ErrorMessages!=null)
+        {
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>@ViewBag.ErrorMessages</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+        <div class="row">
+            @foreach (var orderItem in orderItems)
+            {
+                <div class="col-12 mb-3">
+                    <div class="card p-3 shadow-sm">
+                        <div class="d-flex flex-column flex-md-row align-items-center">
+                            <img src="@orderItem.Product.ImageUrl" width="100" class="rounded me-md-3 mb-2 mb-md-0" alt="..." />
+
+                            <div class="flex-grow-1">
+                                <h5 class="mb-1">@orderItem.Product.Name</h5>
+                                <small class="text-muted">
+                                    <strong>Brand:</strong> @orderItem.Product.Brand |
+                                    <strong>Category:</strong> @orderItem.Product.Category
+                                </small>
+
+                                <div class="mt-2 d-flex align-items-center">
+                                    <button class="btn btn-outline-secondary btn-sm" onclick="decrease(@orderItem.Product.Id)">-</button>
+                                    <span class="border rounded-3 mx-2 px-3 py-1">@orderItem.Quantity</span>
+                                    <button class="btn btn-outline-secondary btn-sm" onclick="increase(this,@orderItem.Product.Id,@orderItem.Product.Stock)">+</button>
+                                </div>
+                            </div>
+
+                            <div class="text-end ms-md-3">
+                                <strong>@(orderItem.UnitPrice * orderItem.Quantity)$</strong>
+                                <br />
+                                <button class="btn btn-sm text-danger mt-2" onclick="remove(@orderItem.Product.Id)">
+                                    <i class="bi bi-trash h5"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="col-md-4">
+        @inject SignInManager<ApplicationUser> signInManager
+        @if (!signInManager.IsSignedIn(User))
+        {
+            <div class="text-white rounded bordered p-3 backGround-main" >
+                <div class="row">
+                    <div class="col">
+                        <p>Subtotal:</p>
+                    </div>
+                    <div class="col">
+                        <p class="text-end">@ViewBag.SubTotal $</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-grid">
+                        <a class="btn fw-bolder btn-light" asp-controller="Account" asp-action="Register">Register</a>
+                    </div>
+                    <div class="col d-grid">
+                        <a class="btn fw-bolder  btn-outline-light" asp-controller="Account" asp-action="LogIn">LogIn</a>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <form asp-action="CheckOut" asp-controller="Cart" method="post" class="p-3 text-white rounded bordered p-3 backGround-main">
+                <div class="mb-3">
+                    <label class="form-label" asp-for="ShippingAddress">Shipping Address</label>
+                    <input class="form-control" asp-for="ShippingAddress" />
+                    <span class="text-warning" asp-validation-for="ShippingAddress"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="@Model.PaymentMethod">Payment Method</label>
+                    <select class="form-select" asp-for="@Model.PaymentMethod">
+                        <option value="cash">Cash on Delivery</option>
+                        <option value="creditCard">Credit Card</option>
+                        <option value="paypal">Paypal</option>
+                    </select>
+                    <span asp-validation-for="PaymentMethod"></span>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col">
+                        <p>Subtotal:</p>
+                    </div>
+                    <div class="col">
+                        <p class="text-end">@ViewBag.SubTotal $</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>Shipping fee:</p>
+                    </div>
+                    <div class="col">
+                        <p class="text-end">@ViewBag.ShippingFee $</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>Total:</p>
+                    </div>
+                    <div class="col">
+                        <p class="text-end">@ViewBag.Total $</p>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-light">Checkout</button>
+                </div>
+            </form>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

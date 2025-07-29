@@ -287,7 +287,6 @@ D:\My Portfolio\BackEnd\.Net MVC projects\E-commerce mvc project\E-commerce\obj\
 D:\My Portfolio\BackEnd\.Net MVC projects\E-commerce mvc project\E-commerce\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.E-commerce.props
 D:\My Portfolio\BackEnd\.Net MVC projects\E-commerce mvc project\E-commerce\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.E-commerce.props
 D:\My Portfolio\BackEnd\.Net MVC projects\E-commerce mvc project\E-commerce\obj\Debug\net8.0\staticwebassets.pack.json
-D:\My Portfolio\BackEnd\.Net MVC projects\E-commerce mvc project\E-commerce\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\My Portfolio\BackEnd\.Net MVC projects\E-commerce mvc project\E-commerce\obj\Debug\net8.0\E-commerce.csproj.Up2Date
 D:\My Portfolio\BackEnd\.Net MVC projects\E-commerce mvc project\E-commerce\obj\Debug\net8.0\E-commerce.dll
 D:\My Portfolio\BackEnd\.Net MVC projects\E-commerce mvc project\E-commerce\obj\Debug\net8.0\refint\E-commerce.dll
@@ -296,3 +295,4 @@ D:\My Portfolio\BackEnd\.Net MVC projects\E-commerce mvc project\E-commerce\obj\
 D:\My Portfolio\BackEnd\.Net MVC projects\E-commerce mvc project\E-commerce\obj\Debug\net8.0\ref\E-commerce.dll
 D:\My Portfolio\BackEnd\.Net MVC projects\E-commerce mvc project\E-commerce\bin\Debug\net8.0\Resend.dll
 D:\My Portfolio\BackEnd\.Net MVC projects\E-commerce mvc project\E-commerce\obj\Debug\net8.0\E-commerce.sourcelink.json
+D:\My Portfolio\BackEnd\.Net MVC projects\E-commerce mvc project\E-commerce\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

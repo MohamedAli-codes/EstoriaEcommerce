@@ -1,5 +1,4 @@
-﻿
-@model StoreSearchModel
+﻿@model StoreSearchModel
 @{
 	ViewData["Title"] = "Estoria store";
 	int totalPages = (int)ViewData["totalPages"]!;
@@ -10,67 +9,77 @@
 	var selectedBrand = ViewData["brand"] as string;
 	var selectedCategory = ViewData["category"] as string;
 	List<Product> products = ViewBag.Products;
+	string selectedSort = Model.Sort;
+	string search = Model.SearchText;
+	string ToggleResetFilter = "";
+
+	string stockAvailablity = "";
+	string stockAvailablityStyle = "";
 }
 
-<h1 id="brand-primary-color" class="text-center ">Estoria products</h1>
-@* filter-sort - search functionality  *@
-<form class="row g-2 mb-3" > 
+
+
+<h1 id="brand-primary-color" class="text-center mb-3">Estoria products</h1>
+
+<form class="row g-2 mb-3"> 
+	<!-- Brand filter -->
 	<div class="col-lg-2 col-md-4">
-		<select class="form-select" asp-for="Brand" onchange="this.form.submit()">
+		<select class="form-select @(string.IsNullOrEmpty(selectedBrand) ? "" : "filterApplied text-white")" asp-for="Brand" onchange="this.form.submit()">
 			<option value="">All Brands</option>
 			@foreach (var b in brands)
 			{
-				if (b == selectedBrand)
-				{
-					<option value="@b" selected>@b</option>
-				}
-				else
-				{
-					<option value="@b">@b</option>
-				}
+				<option value="@b" >@b</option>
 			}
 		</select>
 	</div>
+
+	<!-- Category filter -->
 	<div class="col-lg-2 col-md-12 d-flex">
-		<select class="form-select" asp-for="Category" onchange="this.form.submit()">
+		<select class="form-select @(string.IsNullOrEmpty(selectedCategory) ? "" : "filterApplied text-white")" asp-for="Category" onchange="this.form.submit()">
 			<option value="">All Categories</option>
-			@foreach(var category in categories)
+			@foreach (var category in categories)
 			{
-				if (category== selectedCategory)
-				{
-					<option selected value="@category">@category</option>
-				}else
-				{
-					<option value="@category">@category</option>
-				}
+				<option value="@category">@category</option>
 			}
 		</select>
 	</div>
-	<div class="col-lg-2 col-md-4 ">
-		<select class="form-select" asp-for="Sort"  onchange="this.form.submit()">
+
+	<!-- Sort filter -->
+	<div class="col-lg-2 col-md-4">
+		<select class="form-select @(string.IsNullOrEmpty(selectedSort) ? "" : "filterApplied text-white")" asp-for="Sort" onchange="this.form.submit()">
 			<option value="">-- sort --</option>
-			<option value="Newest">Latest products</option>
-			<option value="Price_asc">Price: Low to High</option>
-			<option value="Price_desc">Price: High to Low </option>
+			<option value="Newest" >Latest products</option>
+			<option value="Price_asc" >Price: Low to High</option>
+			<option value="Price_desc" >Price: High to Low</option>
 		</select>
 	</div> 
-	<div class="col-lg-6 col-md-12">
+	<div class="col-lg-2 col-md-4">
+		@if (!string.IsNullOrEmpty(selectedBrand) || !string.IsNullOrEmpty(selectedCategory) || !string.IsNullOrEmpty(selectedSort) || !string.IsNullOrEmpty(search))
+		{
+			ToggleResetFilter = "btn-outline-primary bg-light text-dark border-2 border-primary fw-3";
+		}
+		else
+		{
+			ToggleResetFilter = "btn-outline-secondary disabled";
+		}
+		<a href="@Url.Action("Index", "Store")" class="btn  d-block w-75 mx-auto  @ToggleResetFilter">Reset All Filters</a>
+	</div>
+	<!-- Search input -->
+	<div class="col-lg-4 col-md-12">
 		<div class="input-group">
-			<input class="form-control" type="search" placeholder="Search" aria-label="Search" asp-for="SearchText">
+			<input class="form-control @(string.IsNullOrEmpty(search) ? "" : " bg-primary text-white")"
+			type="search" placeholder="Search" aria-label="Search" asp-for="SearchText">
 			<button class="btn btn-outline-success" type="submit">Search</button>
 			<button class="btn btn-outline-danger" type="button" onclick="clearSearch(this)">Clear</button>
 		</div>
 	</div>
 </form>
 
-
-
-
-<div class="bg-light" >
+<div class="bg-light">
 	<div class="container">
-		<hr id="brand-primary-color"/>
+		<hr class="mb-4" id="brand-primary-color"/>
 
-		@* pagination functionality *@
+		@* pagination functionality
 		@* need max no of pages / pageindex *@
 		<nav class="my-2">
 			<ul class="pagination justify-content-center">
@@ -91,23 +100,47 @@
 			@foreach (var product in products)
 			{
 				<div class="col-lg-3 col-md-6">
-					<div class="rounded border shadow p-3 text-center h-100 d-flex flex-column">
-						<img src="@product.ImageUrl" class="card-img-top" alt="@product.Name" style="height:180px; object-fit:contain">
+					<div class="rounded border shadow p-3 text-center h-100 d-flex flex-column product-card">
+						<img src="@product.ImageUrl" class="card-img-top product-img-hover" alt="@product.Name" style="height:180px; object-fit:contain">
+						@{
+							switch (product.Stock)
+							{
+								case 0:
+									stockAvailablity = "Out of stock";
+									stockAvailablityStyle = "out-of-stock";
+									break;
+								case <10:
+									stockAvailablity = "Low stock Hurry up!";
+									stockAvailablityStyle = "low-stock";
+									break;
+								default:
+									stockAvailablity = "";
+									stockAvailablityStyle = "";
+									break;
+							}
+						}
+						<p id="productStock" class="w-100 my-0 @stockAvailablityStyle">@(stockAvailablity)</p>
+							@if (product.Stock == 0)
+							{
+								<button class="btn btn-info w-50 mt-1 btm-small notify-btn"
+										onclick="notifySubscribe(this,@product.Id)">
+									Notify me 🔔
+								</button>
+							}
 						<div class="card-body d-flex flex-column">
 							<h5 class="card-title">@product.Name</h5>
 							<hr />
-							<h6 class="card-text "><strong>Brand: </strong>@product.Brand</h6>
+							<h6 class="card-text"><strong>Brand: </strong>@product.Brand</h6>
 							<h6 class="card-text"><strong>Category: </strong>@product.Category</h6>
 							<p class="card-text"><strong>Price: </strong>@product.Price.ToString("C")</p>
-
-							<!-- Side-by-side buttons pushed to bottom -->
-							<div class="mt-auto d-flex justify-content-between gap-2">
-								<a asp-controller="Store" asp-action="Details" asp-route-id="@product.Id" class="btn btn-primary flex-fill">
+							<div class="mt-auto d-flex justify-content-start gap-2 pe-2">
+								<a asp-controller="Store" asp-action="Details" asp-route-id="@product.Id" class="btn btn-primary w-50">
 									Details
 								</a>
-								<a href="@Url.Action("AddToCart", "Cart", new { id = product.Id })" class="btn btn-warning flex-fill">
+								<button @(product.Stock == 0 ? "disabled" : "") type="button" class="btn btn-warning w-50 @(stockAvailablityStyle== "out-of-stock" ? "out-of-stock" :"")"
+										onclick="addToCart(this,@product.Id,@product.Stock)">
 									<i class="bi bi-cart4"></i>
-								</a>
+								</button>
 							</div>
 						</div>
 					</div>
@@ -132,6 +165,28 @@
 			else
 				btn.blur();
 		}
-	</script>
 
+		function notifySubscribe(button, productId) {
+			console.log("Product ID:", productId);
+			fetch('/Notifications/Subscribe', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]')?.value
+				},
+				body: JSON.stringify({ productId })
+				
+			})
+			.then(res => res.json())
+			.then(data => {
+				if (data.success) {
+					button.disabled = true;
+					button.classList.remove("btn-info");
+					button.classList.add("btn-success");
+					button.innerText = "Subscribed 🔔";
+				}
+			});
+		}
+
+	</script>
 }

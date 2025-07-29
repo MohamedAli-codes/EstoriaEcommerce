@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+<div class="container-fluid">
+    <div class="row mt-3 g-4">
+        <div class="col-md-3 ">
+            <div class="card shadow-sm bg-info border-0">
+                <div class="card-body text-center">
+                    <h5>Total Products</h5>
+                    <h3>@ViewData["TotalProducts"]</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 bg-light">
+            <div class="card shadow-sm bg-warning border-0">
+                <div class="card-body text-center">
+                    <h5>Total Users</h5>
+                    <h3>@ViewData["TotalUsers"]</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 bg-light">
+            <div class="card shadow-sm bg-danger border-0">
+                <div class="card-body text-center">
+                    <h5>Total Orders</h5>
+                    <h3>@ViewData["TotalOrders"]</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 bg-light">
+            <div class="card shadow-sm bg-primary border-0">
+                <div class="card-body text-center">
+                    <h5>Total Revenue</h5>
+                    <h3>@((decimal)ViewData["Revenue"]) $</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

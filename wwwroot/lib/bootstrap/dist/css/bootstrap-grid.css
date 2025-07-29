@@ -126,7 +126,7 @@
   width: 33.33333333%;
 }
 
-.col-5 {
+.col-5 fw-bolder {
   flex: 0 0 auto;
   width: 41.66666667%;
 }

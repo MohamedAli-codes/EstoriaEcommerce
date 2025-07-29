@@ -3,8 +3,8 @@
     ViewData["Title"] = "Login";
 }
 
-<div class="row">
-    <div class="col-lg-4 mx-auto rounded border  p-4 bg-light">
+<div class="row p-4">
+    <div class="col-lg-4 mx-auto rounded border border-3 p-4 bg-light">
         <h3 class="text-center mb-3" id="brand-primary-color">Please Login</h3>
         <hr id="brand-primary-color" />
         @* <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div> //method2*@
@@ -19,7 +19,7 @@
 
         <form method="post">
             <div class="row mb-3">
-                <label asp-for="Email" class="form-label "></label>
+                <label asp-for="Email" class="form-label ">Email</label>
                 <div >
                     <input class="form-control" asp-for="Email" />
                     <span asp-validation-for="Email" class="text-danger"></span>
@@ -27,7 +27,7 @@
             </div>
 
             <div class="row mb-3">
-                <label asp-for="Password" class="form-label"></label>
+                <label asp-for="Password" class="form-label">Password</label>
                 <div >
                     <input class="form-control" type="password" asp-for="Password" />
                     <span asp-validation-for="Password" class="text-danger"></span>

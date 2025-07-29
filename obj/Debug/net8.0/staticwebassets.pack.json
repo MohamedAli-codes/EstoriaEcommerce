@@ -17,8 +17,24 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\19011451.png",
+      "PackagePath": "staticwebassets\\images\\19011451.png"
+    },
+    {
       "Id": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\HomeBackgroundimage.png",
       "PackagePath": "staticwebassets\\images\\HomeBackgroundimage.png"
+    },
+    {
+      "Id": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\Products\\download.jpeg",
+      "PackagePath": "staticwebassets\\images\\Products\\download.jpeg"
+    },
+    {
+      "Id": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\Products\\iphone17.jpeg",
+      "PackagePath": "staticwebassets\\images\\Products\\iphone17.jpeg"
+    },
+    {
+      "Id": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\download.jpeg",
+      "PackagePath": "staticwebassets\\images\\download.jpeg"
     },
     {
       "Id": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\gsmarena_020.webp",
@@ -29,8 +45,20 @@
       "PackagePath": "staticwebassets\\images\\iphone-16-design.webp"
     },
     {
+      "Id": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\iphone17.jpeg",
+      "PackagePath": "staticwebassets\\images\\iphone17.jpeg"
+    },
+    {
       "Id": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\mainIcon.jpeg",
       "PackagePath": "staticwebassets\\images\\mainIcon.jpeg"
+    },
+    {
+      "Id": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\old.jpeg",
+      "PackagePath": "staticwebassets\\images\\old.jpeg"
+    },
+    {
+      "Id": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\old2.jpeg",
+      "PackagePath": "staticwebassets\\images\\old2.jpeg"
     },
     {
       "Id": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\js\\site.js",

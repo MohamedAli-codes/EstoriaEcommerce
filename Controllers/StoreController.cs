@@ -1,19 +1,25 @@
-﻿using E_commerce.Models;
+﻿using System.Threading.Tasks;
+using E_commerce.Models;
 using E_commerce.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.CodeAnalysis.Options;
 using Microsoft.EntityFrameworkCore;
+using SendGrid.Helpers.Mail;
 
 namespace E_commerce.Controllers
 {
     public class StoreController : Controller
     {
         private ApplicationContext context;
+        private readonly UserManager<ApplicationUser> userManager;
         private readonly int pageSize = 8;
-        public StoreController(ApplicationContext context)
+        public StoreController(ApplicationContext context , UserManager<ApplicationUser> userManager)
         {
             this.context = context;
+            this.userManager = userManager;
         }
 
         //lazem trteb query search fn -> pagination l2n 3dd results mbny 3l search
@@ -86,9 +92,9 @@ namespace E_commerce.Controllers
 
             /*------- Data needed by view -------*/
             //gm3t kol prop fel model w hb3toh ll view
-            //ViewData["brand"] = brand; //needed for selected attribute
-            //ViewData["category"] = category; //needed for selected attribute
-            //ViewData["searchText"] = searchText;
+            ViewData["brand"] = brand; //needed for selected attribute
+            ViewData["category"] = category; //needed for selected attribute
+            ViewData["searchText"] = searchText;
             StoreSearchModel storeSearchModel = new StoreSearchModel()
             {
                 Brand = brand,
@@ -111,6 +117,32 @@ namespace E_commerce.Controllers
             if (product == null)
                 return RedirectToAction("index");
             return View(product);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public async Task<ActionResult> Subscribe(int productId)
+        {
+            var currentUser = await userManager.GetUserAsync(User);
+            if (currentUser == null)
+                return RedirectToAction("Login", "Account");
+            var userId = await userManager.GetUserIdAsync(currentUser);
+            var alreadySubscribed = context.ProductSubscriptions
+                .Any(p => p.ProductId == productId && p.UserId == userId && !p.Notified);
+
+            if (!alreadySubscribed)
+            {
+                context.ProductSubscriptions.Add(new ProductSubscription
+                {
+                    ProductId = productId,
+                    UserId = userId,
+                    Notified = false,
+                    SubscribedAt = DateTime.Now
+                });
+                context.SaveChanges();
+            }
+            TempData["Message"] = "You have suscribed";
+            return RedirectToAction("Index");
         }
     }
 }

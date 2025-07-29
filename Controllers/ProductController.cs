@@ -2,6 +2,9 @@
 using E_commerce.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis;
+using Microsoft.EntityFrameworkCore;
+using SendGrid.Helpers.Mail;
 
 namespace E_commerce.Controllers
 {
@@ -109,8 +112,10 @@ namespace E_commerce.Controllers
             return View(products);
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+            var categories = await context.Products.Select( p=>p.Category).Distinct().ToListAsync();
+            ViewData["Categories"] = categories;
             return View();
         }
 
@@ -130,6 +135,7 @@ namespace E_commerce.Controllers
                 product.Category = productDto.Category;
                 product.Price = productDto.Price;
                 product.Description = productDto.Description;
+                product.Stock = productDto.Stock;
                 if (productDto.ImageFile != null && productDto.ImageFile.Length > 0)
                 {
                     var fileName = Path.GetFileName(productDto.ImageFile.FileName);
@@ -150,13 +156,16 @@ namespace E_commerce.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Edit([FromRoute] int? id)
+        public async Task<IActionResult> Edit([FromRoute] int? id)
         {
             if (id == null)
                 return BadRequest();
             var product = context.Products.FirstOrDefault( p=>p.Id==id );
-            if (product == null)
+            var categories = await context.Products.Select(p => p.Category).Distinct().ToListAsync();
+            if (product == null )
                 return NotFound();
+
+
             var productDto = new ProductDto()
             {
                 Name = product.Name,
@@ -164,20 +173,36 @@ namespace E_commerce.Controllers
                 Category = product.Category,
                 Description = product.Description,
                 Price = product.Price,
+                Stock = product.Stock
             };
 
             ViewData["productId"] = product.Id;
             ViewData["productImage"] = product.ImageUrl;
             ViewData["createdAt"] = product.CreatedAt.ToString("d");
+            ViewData["Categories"] = categories;
 
             return View(productDto);
+        }
+
+        private void NotifySubscribers(int productId)
+        {
+            var subs = context.ProductSubscriptions
+                        .Where(s => s.ProductId == productId && !s.Notified)
+                        .ToList();
+
+            foreach (var sub in subs)
+            {
+                sub.Notified = true;
+            }
+
+            context.SaveChanges();
         }
 
         [HttpPost]
         public IActionResult Edit([FromRoute] int id , ProductDto productDto)
         {
             var product = context.Products.FirstOrDefault(p => p.Id == id);
-            if (product == null)
+            if (product == null )
                 return NotFound();
 
             if (ModelState.IsValid)
@@ -201,12 +226,19 @@ namespace E_commerce.Controllers
                               System.IO.File.Delete(oldImageFullPath);
                 }
 
+
+                if (product.Stock == 0 && productDto.Stock > 0)
+                {
+                    NotifySubscribers(product.Id);
+                }
+
                 //update product in db
                 product.Name = productDto.Name;
                 product.Brand = productDto.Brand;
                 product.Category = productDto.Category;
                 product.Price = productDto.Price;
                 product.Description = productDto.Description;
+                product.Stock = productDto.Stock;
 
                 context.SaveChanges();
             }
@@ -252,6 +284,17 @@ namespace E_commerce.Controllers
                 return RedirectToAction("Index");
             }
            
+        }
+
+
+        public ActionResult ProductDetailsPartial(int? id)
+        {
+            if (id == null)
+                return BadRequest();
+            var product = context.Products.Find(id);
+            if (product == null)
+                return RedirectToAction("index");
+            return PartialView("ProductDetailsPartial", product);
         }
     }
 }

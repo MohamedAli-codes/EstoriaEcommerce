@@ -1,4 +1,5 @@
 using E_commerce.Models;
+using E_commerce.Seeding;
 using E_commerce.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -29,7 +30,7 @@ namespace E_commerce
             .AddDefaultTokenProviders();
 
             //register email send service
-            builder.Services.AddScoped<SendEmail>();
+            builder.Services.AddTransient<IEmailSender, SmtpEmailSender>();
             builder.Services.AddOptions();
             builder.Services.AddHttpClient<ResendClient>();
             builder.Services.Configure<ResendClientOptions>(o =>
@@ -40,6 +41,13 @@ namespace E_commerce
             //-------
 
             var app = builder.Build();
+
+            //using (var scope = app.Services.CreateScope())
+            //{
+            //    var context = scope.ServiceProvider.GetRequiredService<ApplicationContext>();
+            //    var seeder = new ProductSeeder(context);
+            //    await seeder.SeedAsync();
+            //}
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -55,6 +63,7 @@ namespace E_commerce
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(

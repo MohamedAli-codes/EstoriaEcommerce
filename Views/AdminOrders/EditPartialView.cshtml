@@ -1,0 +1,59 @@
+﻿@model Order
+
+@* Edit order status *@
+<!-- Modal -->
+<div class="modal fade" id="EditOrderStatus" tabindex="-1" aria-labelledby="EditOrderStatus" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="EditOrderStatus">Update Order Status</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="get" class="form" asp-action="Edit" asp-controller="AdminOrders">
+                    <input type="hidden" name="id" value="@Model.Id" />
+                    <select class="form-select mb-2" name="order_status" asp-for="@Model.OrderStatus" >
+                        <option value="created">created</option>
+                        <option value="accepted">accepted</option>
+                        <option value="canceled">canceled</option>
+                        <option value="shipped">shipped</option>
+                        <option value="delivered">delivered</option>
+                        <option value="returned">returned</option>
+                        <option value="deleted">deleted</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Edit PaymentStatus  *@
+<!-- Modal -->
+<div class="modal fade" id="EditPaymentStatus" tabindex="-1" aria-labelledby="EditPaymentStatus" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="EditPaymentStatus">Update Payment Status</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="get" class="form" asp-action="Edit" asp-controller="AdminOrders">
+                    <input type="hidden" name="id" value="@Model.Id" />
+                    <select class="form-select mb-2" name="payment_status" asp-for="@Model.PaymentStatus">
+                        <option value="pending">pending</option>
+                        <option value="accepted">accepted</option>
+                        <option value="canceled">canceled</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

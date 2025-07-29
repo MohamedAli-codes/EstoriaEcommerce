@@ -1,10 +1,17 @@
 wwwroot\css\E_commerce.styles.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\19011451.png
+wwwroot\images\download.jpeg
 wwwroot\images\gsmarena_020.webp
 wwwroot\images\HomeBackgroundimage.png
 wwwroot\images\iphone-16-design.webp
+wwwroot\images\iphone17.jpeg
 wwwroot\images\mainIcon.jpeg
+wwwroot\images\old.jpeg
+wwwroot\images\old2.jpeg
+wwwroot\images\Products\download.jpeg
+wwwroot\images\Products\iphone17.jpeg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

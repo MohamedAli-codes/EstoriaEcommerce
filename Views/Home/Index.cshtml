@@ -9,13 +9,34 @@
     <div class="container text-white py-5">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <h1>Enjoy your shopping Estoria!
+                <h1>Enjoy your shopping with Estoria!
                     <span style="color:#3196d0"></span>
                 </h1>
                 <p>
                     Find a large selection of latest release products from the most popular
                     brands with affordable prices.
                 </p>
+
+                <!-- Open Book Section -->
+                <div class=" p-4 mt-4 book" style="overflow-y:scroll; height:150px">
+                    <div>
+                        <img class="img-fluid mb-2" src="/images/19011451.png" /><br />
+                        <h6 >@DateTime.Today.ToString("dddd, MMMM dd, yyyy")  </h6>
+                    </div>
+                    <ul>
+                        @if (ViewBag.TodayOrders != null && ViewBag.TodayOrders.Count > 0)
+                        {
+                            foreach (var item in ViewBag.TodayOrders)
+                            {
+                                <li><strong>@item.ProductName</strong> - Quantity: @item.Quantity</li>
+                            }
+                        }
+                        else
+                        {
+                            <li>No orders made today.</li>
+                        }
+                    </ul>
+                </div>
             </div>
 
             <div class="col-md-6 text-center">
@@ -34,8 +55,8 @@
 				/* Display each product in a card for large screen width for card
 				= > col-lg-3 12/3-->4cards  for medium screen col-md-6 --> 2 cards
 				*/
-                <div class="col-lg-3 col-md-6"> 
-                    <div class="rounded border shadow p-3 text-center h-100 ">
+                <div class="col-lg-3 col-md-6 ">
+                     <div class="rounded border shadow p-3 text-center h-100   product-card">
 						<img src="@product.ImageUrl" class="img-fluid mb-3" alt="@product.Name" style="height:180px; object-fit:contain"/>
                         <hr />
 						<h5 class="mb-3">@product.Name</h5>
@@ -43,13 +64,13 @@
                             Brand: @product.Brand , Category: @product.Category
                         </p>
                         <h4 class="mb-4">@(product.Price)$</h4>
-                        <div>
-                                     <a asp-controller="Store" asp-action="Details" asp-route-id="@product.Id" class="btn btn-primary">
+                        <div class="mt-auto d-flex justify-content-start gap-2 pe-2">
+                                     <a asp-controller="Store" asp-action="Details" asp-route-id="@product.Id" class="btn btn-primary w-50">
 								Details
 							</a>
-							<a href="@Url.Action("AddToCart", "Cart", new { id = product.Id })" class="btn btn-warning">
-                                         Add to Cart <i class="bi bi-cart4"></i>
-							</a>
+                                     <button type="button" @(product.Stock == 0 ? "disabled" : "") class="btn btn-warning w-50" onclick="addToCart(this,@product.Id,@product.Stock)">
+                                <i class="bi bi-cart4"></i>
+                            </button>
                         </div>
                     </div>
                 </div>

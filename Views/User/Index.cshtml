@@ -1,0 +1,70 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model List<ApplicationUser>
+@inject UserManager<ApplicationUser> userManager;
+@{
+    ViewData["Title"] = "Index";
+    int? pageIndex = ViewBag.pageIndex;
+    int totalPages = ViewBag.totalPages;
+}
+<div class="table-responsive ">
+
+    <table class="table table-hover  table-bordered">
+    <thead class="table-light">
+        <tr class="text-center">
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Role</th>
+            <th>Created At</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var u in Model)
+        {
+            <tr class="text-center">
+                <td>@(u.FirstName+" " + u.LastName)</td>
+                <td>@u.Email</td>
+                <td>@u.PhoneNumber</td>
+                <td>@{
+                        var roles = await userManager.GetRolesAsync(u);
+                        var rolesStr = String.Join(", ",roles);
+                        string color = "black";
+                    }
+                    @if (rolesStr.Contains("admin"))
+                    {
+                        color = "bg-danger text-dark";
+                    }
+                    else if (rolesStr.Contains("seller"))
+                    {
+                        color = "bg-warning text-dark";
+                    }
+                    else
+                    {
+                        color = "bg-info text-dark";
+                    }
+                    <span class="badge  rounded-pill  @color">@rolesStr</span>
+                </td>
+                <td>@u.CreatedAt.ToString("MM/dd/yyyy")</td>
+                <td ><a asp-action="Details" asp-controller="user" asp-route-id="@u.Id" class="btn btn-info font-monospace ">Details</a></td>
+            </tr> 
+        }
+    </tbody>
+    <nav aria-label="...">
+        <ul class="pagination">
+            <li class="page-item @(pageIndex==1? "disabled":"" )">
+                <a class="page-link" asp-route-pageIndex="@(pageIndex-1)">Previous</a>
+            </li>
+            @for(int i = 1; i <= totalPages; i++)
+            {
+                <li class="page-item @(pageIndex==i? "active":"")" aria-current="page">
+                    <a class="page-link" asp-route-pageIndex="@i">@i</a>
+                </li>
+            }
+            <li class="page-item @(pageIndex==totalPages? "disabled":"" )">
+                <a class="page-link" asp-route-pageIndex="@(pageIndex+1)">Next</a>
+            </li>
+        </ul>
+    </nav>
+</table>
+</div>

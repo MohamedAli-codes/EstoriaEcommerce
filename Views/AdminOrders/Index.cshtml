@@ -1,0 +1,119 @@
+﻿@model List<Order>
+@{
+    ViewData["Title"] = "Orders";
+    int pageIndex = ViewBag.PageIndex;
+    int pagesCount = ViewBag.PagesCount;
+    string orderStatusBadgeColor = "bg-danger";
+    string paymentBadgeColor = "bg-danger";
+}
+
+<h1 class="mb-3">Orders List</h1>
+<hr />
+<div class="table-responsive">
+
+    <table class="table table-bordered table-hover text-center">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Client</th>
+                <th>Units</th>
+                <th>Total</th>
+                <th>Payment Method</th>
+                <th>Payment Status</th>
+                <th>Order Status</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach(var order in Model)
+            {
+                decimal totalPrice = 0;
+                int totalQuantity = 0;
+                foreach(var orderItem in order.Items)
+                {
+                    totalPrice += (orderItem.Quantity * orderItem.UnitPrice);
+                    totalQuantity += orderItem.Quantity;
+                }
+                @switch (order.OrderStatus.ToLower())
+                {
+                    case "created":
+                        orderStatusBadgeColor = "bg-warning text-black";
+                    break;
+                                        case "accepted":
+                        orderStatusBadgeColor = "bg-dark";
+                    break;
+                                        case "canceled":
+                        orderStatusBadgeColor = "bg-secondary";
+                    break;
+                    case "shipped":
+                        orderStatusBadgeColor = "bg-primary";
+                        break;
+                    case "delivered":
+                        orderStatusBadgeColor = "bg-success";
+                        break;
+                    case "returned":
+                        orderStatusBadgeColor = "bg-info text-dark";
+                        break;
+                    case "deleted":
+                        orderStatusBadgeColor = "bg-dark";
+                        break;
+                }
+                @switch (order.PaymentStatus.ToLower())
+                {
+                    case "pending":
+                        paymentBadgeColor = "bg-warning text-black";
+                        break;
+                    case "accepted":
+                        paymentBadgeColor = "bg-success";
+                        break;
+                    case "canceled":
+                        paymentBadgeColor = "bg-secondary";
+                        break;
+
+                }
+                <tr >
+                    <td>@order.Id</td>
+                    <td class="text-start">@(order.Client.FirstName + " " + @order.Client.FirstName)</td>
+                    <td>@totalQuantity</td>
+                    <td>@totalPrice</td>
+                    <td>
+                         @order.PaymentMethod
+                    </td>
+                    <td>
+                        <span class="badge @paymentBadgeColor">@order.PaymentStatus</span>
+                    </td>
+                    <td>
+                        <span class="badge @orderStatusBadgeColor">
+                            @order.OrderStatus</span>
+                    </td>
+                    <td>@order.CreatedAt</td>
+                    <td>
+                        <a asp-action="Details" asp-controller="AdminOrders" asp-route-id="@order.Id" class="btn rounder-2 btn-info">Details</a>
+                        <a asp-action="Edit" asp-controller="AdminOrders" asp-route-id="@order.Id" class="btn rounder-2 btn-secondary">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <nav class="mx-auto" aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item @(pageIndex==1? "disabled":"" )" >
+                <a class="page-link" asp-action="Index" asp-controller="AdminOrders" asp-route-pageIndex="@(pageIndex-1)" aria-label="Previous">
+                    <span aria-hidden="true">Prev</span>
+                </a>
+            </li>
+            @for(int i = 1; i <= ViewBag.PagesCount; i++)
+            {
+                <li class="page-item @(pageIndex==i? "active":"")"><a class="page-link " asp-action="Index" asp-controller="AdminOrders" asp-route-pageIndex="@i">@i</a></li>
+            }
+            <li class="page-item @(pageIndex==pagesCount? "disabled" : "")">
+                <a 
+                    class="page-link"  aria-label="Next" asp-action="Index" asp-controller="AdminOrders" asp-route-pageIndex="@(pageIndex+1)">
+                    <span aria-hidden="true">Next</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,56 @@
+﻿@* ViewBag.CartItems = cartItems; *@
+@* ViewBag.CartSize = cartSize; *@
+@* ViewBag.DeliveryAddress = deliveryAddress; *@
+@* ViewBag.PaymentMethod = paymentMethod; *@
+@* ViewBag.Total = total; *@
+@{
+    ViewData["Title"] = "Confirm";
+}
+
+@if (ViewBag.SuccessMessage != null)
+{
+    <div class="bg-light mx-auto rounded-3 border p-4" style="width:420px;">
+        <strong>@ViewBag.SuccessMessage</strong>
+        <a class="btn btn-outline-primary"
+        asp-controller="ClientOrders" asp-action="Index">Back</a>
+    </div>
+}
+else
+{
+    <div class="bg-light mx-auto rounded-3 border p-4" style="width:420px;">
+        <h3>Confirm</h3>
+        <hr />
+        <div class="row mb-3">
+            <div class="col-5 fw-bolder">Delivery Address:</div>
+            <div class="col-7">@ViewBag.DeliveryAddress</div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-5 fw-bolder">Payment method: </div>
+            <div class="col-7">@ViewBag.PaymentMethod</div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-5 fw-bolder">Total amount: </div>
+            <div class="col-7">@ViewBag.Total $</div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-5 fw-bolder">Quantity: </div>
+            <div class="col-7">@ViewBag.CartSize</div>
+        </div>
+
+        <hr />
+    
+        <form method="post">
+            <div class="row">
+                <div class="col-sm-6 d-grid">
+                    <button class="btn btn-success" type="submit">Confirm</button>
+                </div>
+                <div class="col-sm-6 d-grid">
+                    <a class="btn btn-outline-secondary" asp-action="Index" asp-controller="Cart" >Back</a>
+                </div>
+            </div>
+        </form>
+    </div>
+}

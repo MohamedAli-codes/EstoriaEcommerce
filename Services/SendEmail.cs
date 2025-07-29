@@ -1,27 +1,43 @@
 ﻿using SendGrid.Helpers.Mail;
 using SendGrid;
 using Resend;
+using System.Net.Mail;
+using System.Net;
 
 namespace E_commerce.Services
 {
-    public class SendEmail
+    public class SmtpEmailSender : IEmailSender
     {
-        private readonly IResend _resend;
-        public SendEmail(IResend resend)
+        private IConfiguration config;
+
+        public SmtpEmailSender(IConfiguration config)
         {
-            _resend = resend;
+            this.config = config;
         }
 
-        public async Task SendEmailAsync( string senderEmail,  string recieverEmail , string subject,string? HtmlContent)
+        public async Task SendEmailAsync(string toEmail, string subject, string messageHtml)
         {
-            var message = new EmailMessage() ;
-            message.From = senderEmail;
-            message.To.Add(recieverEmail);
-            message.Subject = subject;
-            message.HtmlBody = HtmlContent;
+            var smtpClient = new SmtpClient(config["Smtp:Host"], int.Parse(config["Smtp:Port"])) 
+            { 
+                Credentials= new NetworkCredential(config["Smtp:Username"],config["Smtp:Password"]) ,
+                EnableSsl = true 
+            };
 
-            var result = await _resend.EmailSendAsync(message);
-            Console.WriteLine(result.Content);
+            var mailMessage = new MailMessage() 
+            { From = new MailAddress(config["Smtp:From"]),
+                Subject = subject,
+                Body = messageHtml,
+                IsBodyHtml = true,
+            };
+
+            mailMessage.To.Add(toEmail);
+            try
+            {
+                await smtpClient.SendMailAsync(mailMessage);
+            }
+            catch (Exception ex) {
+                Console.WriteLine(ex.Message.ToString());
+            }
         }
     }
 }

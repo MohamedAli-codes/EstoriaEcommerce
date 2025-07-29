@@ -10,6 +10,8 @@ namespace E_commerce.Services
         {
         }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<ProductSubscription> ProductSubscriptions { get; set; }
  
 
     }

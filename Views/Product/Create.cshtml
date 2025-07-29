@@ -3,59 +3,65 @@
     ViewData["Title"] = "Add New Product";
 }
 
-<h1 class="mb-4">Add New Product</h1>
+<div class="row p-2 rounded-3 border-2">
+    <div class="card col-lg-6 mx-auto p-2 bg-light">
+        <h1 class="card-title text-start m-1" id="brand-primary-color">Add New Product</h1>
+        <hr />
+        <div class="card-body">
+            <form asp-controller="product" asp-action="create" method="post" enctype="multipart/form-data">
 
-<div class="card shadow-sm">
-    <div class="card-body">
-        <form asp-controller="product" asp-action="create" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label fw-bold" asp-for="@Model.Name"></label>
+                    <input class="form-control" asp-for="@Model.Name" />
+                    <span class="text-danger" asp-validation-for="@Model.Name"></span>
+                </div>
 
-            <div class="mb-3">
-                <label class="form-label fw-bold" asp-for="@Model.Name"></label>
-                <input class="form-control" asp-for="@Model.Name" />
-                <span class="text-danger" asp-validation-for="@Model.Name"></span>
-            </div>
+                <div class="mb-3">
+                    <label class="form-label fw-bold" asp-for="@Model.Brand"></label>
+                    <input class="form-control" asp-for="@Model.Brand" />
+                    <span class="text-danger" asp-validation-for="@Model.Brand"></span>
+                </div>
 
-            <div class="mb-3">
-                <label class="form-label fw-bold" asp-for="@Model.Brand"></label>
-                <input class="form-control" asp-for="@Model.Brand" />
-				<span class="text-danger" asp-validation-for="@Model.Brand"></span>
-            </div>
+                <div class="mb-3">
+                    <label class="form-label fw-bold" asp-for="@Model.Stock"></label>
+                    <input class="form-control" asp-for="@Model.Stock" />
+                    <span class="text-danger" asp-validation-for="@Model.Stock"></span>
+                </div>
 
-            <div class="mb-3">
-                <label class="form-label fw-bold" asp-for="@Model.Category"></label>
-                <select asp-for="@Model.Category">
-					<option value="">Select a category</option>
-					<option value="phones">phones</option>
-                    <option value="computers">computers</option>
-                    <option value="accessories">accessories</option>
-                    <option value="printers">printers</option>
-                    <option value="other">other</option>
-                </select>
-                <span class="text-danger" asp-validation-for="@Model.Category"></span>
-            </div>
+                <div class="mb-3">
+                    <label class="form-label fw-bold" asp-for="@Model.Category"></label>
+                    <select class="form-select" asp-for="@Model.Category">
+                        @foreach (var category in ViewBag.Categories)
+                        {
+                            <option class="form-select" value="@category">@category</option>
+                        }
+                    </select>
+                    <span class="text-danger" asp-validation-for="@Model.Category"></span>
+                </div>
 
-            <div class="mb-3">
-                <label class="form-label fw-bold" asp-for="@Model.Price"></label>
-                <input class="form-control" asp-for="@Model.Price" />
-				<span class="text-danger" asp-validation-for="@Model.Price"></span>
-            </div>
+                <div class="mb-3">
+                    <label class="form-label fw-bold" asp-for="@Model.Price"></label>
+                    <input class="form-control" asp-for="@Model.Price" />
+                    <span class="text-danger" asp-validation-for="@Model.Price"></span>
+                </div>
 
-            <div class="mb-3">
-                <label class="form-label fw-bold" asp-for="@Model.ImageFile"></label>
-                <input class="form-control" asp-for="@Model.ImageFile" type="file" />
-				<span class="text-danger" asp-validation-for="@Model.ImageFile"></span>
-            </div>
+                <div class="mb-3">
+                    <label class="form-label fw-bold" asp-for="@Model.ImageFile"></label>
+                    <input class="form-control" asp-for="@Model.ImageFile" type="file" />
+                    <span class="text-danger" asp-validation-for="@Model.ImageFile"></span>
+                </div>
 
-            <div class="mb-3">
-                <label class="form-label fw-bold" asp-for="@Model.Description"></label>
-                <textarea class="form-control" asp-for="@Model.Description"></textarea>
-				<span class="text-danger" asp-validation-for="@Model.Description"></span>
-            </div>
+                <div class="mb-3">
+                    <label class="form-label fw-bold" asp-for="@Model.Description"></label>
+                    <textarea class="form-control" asp-for="@Model.Description"></textarea>
+                    <span class="text-danger" asp-validation-for="@Model.Description"></span>
+                </div>
 
-            <div class="d-flex gap-2">
-                <input class="btn btn-success" type="submit" value="Add product" />
-                <a class="btn btn-dark text-light" asp-controller="product" asp-action="index">Back to Products</a>
-            </div>
-        </form>
+                <div class="d-flex gap-2">
+                    <input class="btn btn-success" type="submit" value="Add product" />
+                    <a class="btn btn-dark text-light" asp-controller="product" asp-action="index">Back to Products</a>
+                </div>
+            </form>
+        </div>
     </div>
 </div>

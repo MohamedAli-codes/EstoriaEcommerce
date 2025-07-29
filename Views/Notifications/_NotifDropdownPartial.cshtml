@@ -1,0 +1,20 @@
+﻿@model List<E_commerce.Models.ProductSubscription>
+
+@if (Model.Any())
+{
+    foreach (var item in Model)
+    {
+        <li>
+            <button class="btn btn-sm text-danger p-0 border-0 bg-transparent" onclick="deleteNotification(@item.Id)" title="Delete">
+                ❌
+            </button>
+            <a class="dropdown-item small" href="/Store/Details/@item.ProductId">
+                product is avialable Now! 🙋‍♂️ <strong>@item.Product.Name.Substring(0,10)+"..."</strong>
+            </a>
+        </li>
+    }
+}
+else
+{
+    <li><span class="dropdown-item text-muted small">No new notifications now.</span></li>
+}

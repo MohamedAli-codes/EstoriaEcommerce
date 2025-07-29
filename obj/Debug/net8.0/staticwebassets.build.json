@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4o3bK5h0GQbPlEUh364isZK4UVchTqJiMCHc0MBMJNY=",
+  "Hash": "T+Csr0h0fI5x8E9YN0mmapj7Bh3N77UES7RWgwybMsA=",
   "Source": "E-commerce",
   "BasePath": "_content/E-commerce",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "pr5t1jk0zf",
-      "Integrity": "izBbDXFuZTu4CRyYCt+T2vT6jotzieADITwBm7bL3VU=",
+      "Fingerprint": "xt3yqzha1e",
+      "Integrity": "G2JBgIgeGgTw+0VY0g+0ZyZq/a/1DdaBsZScdHmqY38=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\E_commerce.styles.css"
@@ -120,6 +120,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\19011451.png",
+      "SourceId": "E-commerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\",
+      "BasePath": "_content/E-commerce",
+      "RelativePath": "images/19011451#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bq2wgklz77",
+      "Integrity": "LTrIEapYpEfCT6aBagmFzE2+XS2UNX3bolH2di/Pggo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\19011451.png"
+    },
+    {
+      "Identity": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\download.jpeg",
+      "SourceId": "E-commerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\",
+      "BasePath": "_content/E-commerce",
+      "RelativePath": "images/download#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ngbcr49hhx",
+      "Integrity": "+d9pXBGyEeecfzspmAAukQlnIJbm3cl1cHPfgDvukfM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\download.jpeg"
     },
     {
       "Identity": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\gsmarena_020.webp",
@@ -185,6 +227,27 @@
       "OriginalItemSpec": "wwwroot\\images\\iphone-16-design.webp"
     },
     {
+      "Identity": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\iphone17.jpeg",
+      "SourceId": "E-commerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\",
+      "BasePath": "_content/E-commerce",
+      "RelativePath": "images/iphone17#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "885ie6jmto",
+      "Integrity": "CL/XBqes1Ue3miFBEZIAnmVFlyl5WDKsszbOk0J5E7E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\iphone17.jpeg"
+    },
+    {
       "Identity": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\mainIcon.jpeg",
       "SourceId": "E-commerce",
       "SourceType": "Discovered",
@@ -199,11 +262,95 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "um03jrwhlt",
+      "Integrity": "Clt6Jr96E4SkEIbOZToO1Le47nQVfXX2GijSg3e9h7w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\mainIcon.jpeg"
+    },
+    {
+      "Identity": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\old.jpeg",
+      "SourceId": "E-commerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\",
+      "BasePath": "_content/E-commerce",
+      "RelativePath": "images/old#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
       "Fingerprint": "mfmypsu6vt",
       "Integrity": "7lBQ0EACu0LF4jgea6JS6WrgOlQxZhIHqatLsWG9LBY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\mainIcon.jpeg"
+      "OriginalItemSpec": "wwwroot\\images\\old.jpeg"
+    },
+    {
+      "Identity": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\old2.jpeg",
+      "SourceId": "E-commerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\",
+      "BasePath": "_content/E-commerce",
+      "RelativePath": "images/old2#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "uih65redmz",
+      "Integrity": "Ni9y8jlXK7ZrCvx/GoIPwleranYbj2scB8ECyHeYvPg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\old2.jpeg"
+    },
+    {
+      "Identity": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\Products\\download.jpeg",
+      "SourceId": "E-commerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\",
+      "BasePath": "_content/E-commerce",
+      "RelativePath": "images/Products/download#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ngbcr49hhx",
+      "Integrity": "+d9pXBGyEeecfzspmAAukQlnIJbm3cl1cHPfgDvukfM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Products\\download.jpeg"
+    },
+    {
+      "Identity": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\Products\\iphone17.jpeg",
+      "SourceId": "E-commerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\",
+      "BasePath": "_content/E-commerce",
+      "RelativePath": "images/Products/iphone17#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "885ie6jmto",
+      "Integrity": "CL/XBqes1Ue3miFBEZIAnmVFlyl5WDKsszbOk0J5E7E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Products\\iphone17.jpeg"
     },
     {
       "Identity": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\js\\site.js",
@@ -241,8 +388,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "mpyigms19s",
-      "Integrity": "xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM=",
+      "Fingerprint": "b64wxaaaf4",
+      "Integrity": "3dn8cmCB0gurOhLna9mxVABzGHmFQO3GY6q1l/BHhe8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
@@ -262,8 +409,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "73kdqttayv",
-      "Integrity": "DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q=",
+      "Fingerprint": "758219ixu2",
+      "Integrity": "RaUZNQBCAxulBu0mHjvgRKdTEZl6vvqLmscD8fb+wNY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
@@ -283,8 +430,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "bpk8xqwxhs",
-      "Integrity": "z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=",
+      "Fingerprint": "5jc3106pt0",
+      "Integrity": "z1yoo5l6+e6Sz1ttrdvrzrEictq9Y7uzMJadosLlM+I=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
@@ -304,8 +451,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8inm30yfxf",
-      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
+      "Fingerprint": "im0yfz8ct2",
+      "Integrity": "Vm16h+V9a0GgdoO9Mu1YIBiHu1wDNdguAcwwwANlH1U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
@@ -325,8 +472,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ve6x09088i",
-      "Integrity": "SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY=",
+      "Fingerprint": "7qy5cmiuz0",
+      "Integrity": "D4P/14CZtBYtDX4rPmchDNgfNfCn7TbC6DGstySGiw8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
@@ -346,8 +493,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "4gxs3k148c",
-      "Integrity": "VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE=",
+      "Fingerprint": "fh1kuoghqu",
+      "Integrity": "g8IznlKMM0YLp7rmTBzgQ2nPn9tuPO3YWuP7XJtQEZQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
@@ -367,8 +514,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9b9oa1qrmt",
-      "Integrity": "22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU=",
+      "Fingerprint": "xlvdba6yzo",
+      "Integrity": "RRTATHnqkzwUdulPELmcoXRoyewM0rrUXrihVPSQblw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
@@ -388,8 +535,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "fctod5rc9n",
-      "Integrity": "j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM=",
+      "Fingerprint": "5h3fll86e2",
+      "Integrity": "WWhI84A2844HSDpgRIuU/xznIj6w6FDX48OvoM/pvDc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
@@ -409,8 +556,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "agp80tu62r",
-      "Integrity": "JtktgiuQAd+AXerCnPMrHCDz1h5AtkH5tobvpuG7xZ4=",
+      "Fingerprint": "33k1fk1zud",
+      "Integrity": "EdWlAK+gtuP1UWMZoUc1YaAno3VLT9jfGPuAjUmd9DY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
@@ -430,8 +577,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "st1cbwfwo5",
-      "Integrity": "QO8cMbVkLiktUX1cHeXSUSe5nXMXUgyL9cjwnMyxPqc=",
+      "Fingerprint": "nv6p841b2k",
+      "Integrity": "E1e38H9LymNK6ptazTP/aGvtWLFUedvejoN2f7yR/R8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
@@ -451,8 +598,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "unj9p35syc",
-      "Integrity": "ysBT/JYxH9gcMnwxT4+MB4sPxOx/JMg9wi77FA13T9A=",
+      "Fingerprint": "6js4x5oyqu",
+      "Integrity": "jqFpWWJshujY7ARKEe5q+Oy8OHvFnYLWcnxlBdfex3g=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
@@ -472,8 +619,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "5vj65cig9w",
-      "Integrity": "72C/qDCGu+OwWeVA03bf9Ke0T8oIozCub0lfJkhzhvE=",
+      "Fingerprint": "89mhde4ypa",
+      "Integrity": "7G+gpot39zFoAO9TTCpslm6Jpkttdqn18Y1GsqEegyo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
@@ -493,8 +640,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "q2ku51ktnl",
-      "Integrity": "3vUJkZSpKL/zG7x6GNvDjs0TxYUo9zMt6dAc8hp9CVo=",
+      "Fingerprint": "r0j0mfao7d",
+      "Integrity": "tY2kFKg+TA+S63k6VRatQaACNmJ9WAsMtLS15gLP2lA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
@@ -514,8 +661,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "2q4vfeazbq",
-      "Integrity": "qvA39OMlEs53jaewqVFmE8DQQrio47bZtlTs+Wu6U8g=",
+      "Fingerprint": "dg3i8yakqh",
+      "Integrity": "A67KqsYd/pjVS2ydqZrX1KJ2+xDD0Vv1hTLw2HdZlzk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
@@ -535,8 +682,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "n1oizzvkh6",
-      "Integrity": "O6lb2kXarGgVw4/RDD42yYPhZIwREthThQFKGmD+3j0=",
+      "Fingerprint": "v9oylsd7i9",
+      "Integrity": "nZulgFHO7Cvpg9v6oxovhq30rDVPfF0Gth+fCefOnEg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
@@ -556,8 +703,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "o371a8zbv2",
-      "Integrity": "NDSZjIiMPRIoO7/w7+jHef8retP4riQa8PMj4BVRGok=",
+      "Fingerprint": "vkqk0ndcza",
+      "Integrity": "cbBCVrfJttDV144i82zYTM/PkF0/lC9WKDqykKOx6Dc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
@@ -1436,7 +1583,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1023"
+          "Value": "2385"
         },
         {
           "Name": "Content-Type",
@@ -1444,11 +1591,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"izBbDXFuZTu4CRyYCt+T2vT6jotzieADITwBm7bL3VU=\""
+          "Value": "\"G2JBgIgeGgTw+0VY0g+0ZyZq/a/1DdaBsZScdHmqY38=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Jun 2025 08:39:34 GMT"
+          "Value": "Tue, 29 Jul 2025 00:39:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1458,12 +1605,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-izBbDXFuZTu4CRyYCt+T2vT6jotzieADITwBm7bL3VU="
+          "Value": "sha256-G2JBgIgeGgTw+0VY0g+0ZyZq/a/1DdaBsZScdHmqY38="
         }
       ]
     },
     {
-      "Route": "css/E_commerce.styles.pr5t1jk0zf.css",
+      "Route": "css/E_commerce.styles.xt3yqzha1e.css",
       "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\css\\E_commerce.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1473,7 +1620,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1023"
+          "Value": "2385"
         },
         {
           "Name": "Content-Type",
@@ -1481,11 +1628,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"izBbDXFuZTu4CRyYCt+T2vT6jotzieADITwBm7bL3VU=\""
+          "Value": "\"G2JBgIgeGgTw+0VY0g+0ZyZq/a/1DdaBsZScdHmqY38=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Jun 2025 08:39:34 GMT"
+          "Value": "Tue, 29 Jul 2025 00:39:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1495,7 +1642,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "pr5t1jk0zf"
+          "Value": "xt3yqzha1e"
         },
         {
           "Name": "label",
@@ -1503,7 +1650,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-izBbDXFuZTu4CRyYCt+T2vT6jotzieADITwBm7bL3VU="
+          "Value": "sha256-G2JBgIgeGgTw+0VY0g+0ZyZq/a/1DdaBsZScdHmqY38="
         }
       ]
     },
@@ -1612,7 +1759,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Jun 2025 12:50:55 GMT"
+          "Value": "Sun, 27 Jul 2025 18:51:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1657,7 +1804,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Jun 2025 12:50:55 GMT"
+          "Value": "Sun, 27 Jul 2025 18:51:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1702,7 +1849,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Jun 2025 12:50:55 GMT"
+          "Value": "Sun, 27 Jul 2025 18:51:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1739,7 +1886,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Jun 2025 12:50:55 GMT"
+          "Value": "Sun, 27 Jul 2025 18:51:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1832,6 +1979,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "images/19011451.bq2wgklz77.png",
+      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\19011451.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27843"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LTrIEapYpEfCT6aBagmFzE2+XS2UNX3bolH2di/Pggo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Jul 2025 00:02:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bq2wgklz77"
+        },
+        {
+          "Name": "label",
+          "Value": "images/19011451.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LTrIEapYpEfCT6aBagmFzE2+XS2UNX3bolH2di/Pggo="
+        }
+      ]
+    },
+    {
+      "Route": "images/19011451.png",
+      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\19011451.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27843"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LTrIEapYpEfCT6aBagmFzE2+XS2UNX3bolH2di/Pggo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Jul 2025 00:02:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LTrIEapYpEfCT6aBagmFzE2+XS2UNX3bolH2di/Pggo="
+        }
+      ]
+    },
+    {
+      "Route": "images/download.jpeg",
+      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\download.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2656"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+d9pXBGyEeecfzspmAAukQlnIJbm3cl1cHPfgDvukfM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Jul 2025 08:51:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+d9pXBGyEeecfzspmAAukQlnIJbm3cl1cHPfgDvukfM="
+        }
+      ]
+    },
+    {
+      "Route": "images/download.ngbcr49hhx.jpeg",
+      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\download.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2656"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+d9pXBGyEeecfzspmAAukQlnIJbm3cl1cHPfgDvukfM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Jul 2025 08:51:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ngbcr49hhx"
+        },
+        {
+          "Name": "label",
+          "Value": "images/download.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+d9pXBGyEeecfzspmAAukQlnIJbm3cl1cHPfgDvukfM="
         }
       ]
     },
@@ -2082,8 +2393,172 @@
       ]
     },
     {
+      "Route": "images/iphone17.885ie6jmto.jpeg",
+      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\iphone17.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2858"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CL/XBqes1Ue3miFBEZIAnmVFlyl5WDKsszbOk0J5E7E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Jul 2025 09:16:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "885ie6jmto"
+        },
+        {
+          "Name": "label",
+          "Value": "images/iphone17.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CL/XBqes1Ue3miFBEZIAnmVFlyl5WDKsszbOk0J5E7E="
+        }
+      ]
+    },
+    {
+      "Route": "images/iphone17.jpeg",
+      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\iphone17.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2858"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CL/XBqes1Ue3miFBEZIAnmVFlyl5WDKsszbOk0J5E7E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Jul 2025 09:16:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CL/XBqes1Ue3miFBEZIAnmVFlyl5WDKsszbOk0J5E7E="
+        }
+      ]
+    },
+    {
       "Route": "images/mainIcon.jpeg",
       "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\mainIcon.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1109609"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Clt6Jr96E4SkEIbOZToO1Le47nQVfXX2GijSg3e9h7w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 27 Jul 2025 17:50:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Clt6Jr96E4SkEIbOZToO1Le47nQVfXX2GijSg3e9h7w="
+        }
+      ]
+    },
+    {
+      "Route": "images/mainIcon.um03jrwhlt.jpeg",
+      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\mainIcon.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1109609"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Clt6Jr96E4SkEIbOZToO1Le47nQVfXX2GijSg3e9h7w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 27 Jul 2025 17:50:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "um03jrwhlt"
+        },
+        {
+          "Name": "label",
+          "Value": "images/mainIcon.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Clt6Jr96E4SkEIbOZToO1Le47nQVfXX2GijSg3e9h7w="
+        }
+      ]
+    },
+    {
+      "Route": "images/old.jpeg",
+      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\old.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2119,8 +2594,8 @@
       ]
     },
     {
-      "Route": "images/mainIcon.mfmypsu6vt.jpeg",
-      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\mainIcon.jpeg",
+      "Route": "images/old.mfmypsu6vt.jpeg",
+      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\old.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2155,11 +2630,257 @@
         },
         {
           "Name": "label",
-          "Value": "images/mainIcon.jpeg"
+          "Value": "images/old.jpeg"
         },
         {
           "Name": "integrity",
           "Value": "sha256-7lBQ0EACu0LF4jgea6JS6WrgOlQxZhIHqatLsWG9LBY="
+        }
+      ]
+    },
+    {
+      "Route": "images/old2.jpeg",
+      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\old2.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "922036"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ni9y8jlXK7ZrCvx/GoIPwleranYbj2scB8ECyHeYvPg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Jul 2025 13:22:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ni9y8jlXK7ZrCvx/GoIPwleranYbj2scB8ECyHeYvPg="
+        }
+      ]
+    },
+    {
+      "Route": "images/old2.uih65redmz.jpeg",
+      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\old2.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "922036"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ni9y8jlXK7ZrCvx/GoIPwleranYbj2scB8ECyHeYvPg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Jul 2025 13:22:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uih65redmz"
+        },
+        {
+          "Name": "label",
+          "Value": "images/old2.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ni9y8jlXK7ZrCvx/GoIPwleranYbj2scB8ECyHeYvPg="
+        }
+      ]
+    },
+    {
+      "Route": "images/Products/download.jpeg",
+      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\Products\\download.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2656"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+d9pXBGyEeecfzspmAAukQlnIJbm3cl1cHPfgDvukfM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Jul 2025 08:31:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+d9pXBGyEeecfzspmAAukQlnIJbm3cl1cHPfgDvukfM="
+        }
+      ]
+    },
+    {
+      "Route": "images/Products/download.ngbcr49hhx.jpeg",
+      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\Products\\download.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2656"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+d9pXBGyEeecfzspmAAukQlnIJbm3cl1cHPfgDvukfM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Jul 2025 08:31:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ngbcr49hhx"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Products/download.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+d9pXBGyEeecfzspmAAukQlnIJbm3cl1cHPfgDvukfM="
+        }
+      ]
+    },
+    {
+      "Route": "images/Products/iphone17.885ie6jmto.jpeg",
+      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\Products\\iphone17.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2858"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CL/XBqes1Ue3miFBEZIAnmVFlyl5WDKsszbOk0J5E7E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Jul 2025 08:51:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "885ie6jmto"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Products/iphone17.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CL/XBqes1Ue3miFBEZIAnmVFlyl5WDKsszbOk0J5E7E="
+        }
+      ]
+    },
+    {
+      "Route": "images/Products/iphone17.jpeg",
+      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\images\\Products\\iphone17.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2858"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CL/XBqes1Ue3miFBEZIAnmVFlyl5WDKsszbOk0J5E7E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Jul 2025 08:51:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CL/XBqes1Ue3miFBEZIAnmVFlyl5WDKsszbOk0J5E7E="
         }
       ]
     },
@@ -2246,6 +2967,51 @@
       ]
     },
     {
+      "Route": "lib/bootstrap/dist/css/bootstrap.b64wxaaaf4.css",
+      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "204146"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3dn8cmCB0gurOhLna9mxVABzGHmFQO3GY6q1l/BHhe8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b64wxaaaf4"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3dn8cmCB0gurOhLna9mxVABzGHmFQO3GY6q1l/BHhe8="
+        }
+      ]
+    },
+    {
       "Route": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "Selectors": [],
@@ -2256,7 +3022,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "204136"
+          "Value": "204146"
         },
         {
           "Name": "Content-Type",
@@ -2264,11 +3030,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM=\""
+          "Value": "\"3dn8cmCB0gurOhLna9mxVABzGHmFQO3GY6q1l/BHhe8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2278,12 +3044,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM="
+          "Value": "sha256-3dn8cmCB0gurOhLna9mxVABzGHmFQO3GY6q1l/BHhe8="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.css.73kdqttayv.map",
+      "Route": "lib/bootstrap/dist/css/bootstrap.css.758219ixu2.map",
       "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2293,7 +3059,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "536547"
+          "Value": "536557"
         },
         {
           "Name": "Content-Type",
@@ -2301,11 +3067,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q=\""
+          "Value": "\"RaUZNQBCAxulBu0mHjvgRKdTEZl6vvqLmscD8fb+wNY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2315,7 +3081,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "73kdqttayv"
+          "Value": "758219ixu2"
         },
         {
           "Name": "label",
@@ -2323,7 +3089,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q="
+          "Value": "sha256-RaUZNQBCAxulBu0mHjvgRKdTEZl6vvqLmscD8fb+wNY="
         }
       ]
     },
@@ -2338,7 +3104,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "536547"
+          "Value": "536557"
         },
         {
           "Name": "Content-Type",
@@ -2346,11 +3112,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q=\""
+          "Value": "\"RaUZNQBCAxulBu0mHjvgRKdTEZl6vvqLmscD8fb+wNY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2360,12 +3126,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q="
+          "Value": "sha256-RaUZNQBCAxulBu0mHjvgRKdTEZl6vvqLmscD8fb+wNY="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.min.bpk8xqwxhs.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap.min.5jc3106pt0.css",
       "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2375,7 +3141,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162720"
+          "Value": "162730"
         },
         {
           "Name": "Content-Type",
@@ -2383,11 +3149,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+          "Value": "\"z1yoo5l6+e6Sz1ttrdvrzrEictq9Y7uzMJadosLlM+I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2397,7 +3163,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "bpk8xqwxhs"
+          "Value": "5jc3106pt0"
         },
         {
           "Name": "label",
@@ -2405,7 +3171,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+          "Value": "sha256-z1yoo5l6+e6Sz1ttrdvrzrEictq9Y7uzMJadosLlM+I="
         }
       ]
     },
@@ -2420,7 +3186,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162720"
+          "Value": "162730"
         },
         {
           "Name": "Content-Type",
@@ -2428,11 +3194,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+          "Value": "\"z1yoo5l6+e6Sz1ttrdvrzrEictq9Y7uzMJadosLlM+I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2442,12 +3208,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+          "Value": "sha256-z1yoo5l6+e6Sz1ttrdvrzrEictq9Y7uzMJadosLlM+I="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.min.css.8inm30yfxf.map",
+      "Route": "lib/bootstrap/dist/css/bootstrap.min.css.im0yfz8ct2.map",
       "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2457,7 +3223,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "449111"
+          "Value": "449121"
         },
         {
           "Name": "Content-Type",
@@ -2465,11 +3231,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+          "Value": "\"Vm16h+V9a0GgdoO9Mu1YIBiHu1wDNdguAcwwwANlH1U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2479,7 +3245,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "8inm30yfxf"
+          "Value": "im0yfz8ct2"
         },
         {
           "Name": "label",
@@ -2487,7 +3253,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+          "Value": "sha256-Vm16h+V9a0GgdoO9Mu1YIBiHu1wDNdguAcwwwANlH1U="
         }
       ]
     },
@@ -2502,7 +3268,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "449111"
+          "Value": "449121"
         },
         {
           "Name": "Content-Type",
@@ -2510,11 +3276,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+          "Value": "\"Vm16h+V9a0GgdoO9Mu1YIBiHu1wDNdguAcwwwANlH1U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2524,13 +3290,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+          "Value": "sha256-Vm16h+V9a0GgdoO9Mu1YIBiHu1wDNdguAcwwwANlH1U="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.mpyigms19s.css",
-      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.7qy5cmiuz0.css",
+      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2539,7 +3305,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "204136"
+          "Value": "203813"
         },
         {
           "Name": "Content-Type",
@@ -2547,11 +3313,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM=\""
+          "Value": "\"D4P/14CZtBYtDX4rPmchDNgfNfCn7TbC6DGstySGiw8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2561,15 +3327,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "mpyigms19s"
+          "Value": "7qy5cmiuz0"
         },
         {
           "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.css"
+          "Value": "lib/bootstrap/dist/css/bootstrap.rtl.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM="
+          "Value": "sha256-D4P/14CZtBYtDX4rPmchDNgfNfCn7TbC6DGstySGiw8="
         }
       ]
     },
@@ -2584,7 +3350,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "203803"
+          "Value": "203813"
         },
         {
           "Name": "Content-Type",
@@ -2592,11 +3358,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY=\""
+          "Value": "\"D4P/14CZtBYtDX4rPmchDNgfNfCn7TbC6DGstySGiw8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2606,12 +3372,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY="
+          "Value": "sha256-D4P/14CZtBYtDX4rPmchDNgfNfCn7TbC6DGstySGiw8="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.4gxs3k148c.map",
+      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.fh1kuoghqu.map",
       "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2621,7 +3387,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "536461"
+          "Value": "536471"
         },
         {
           "Name": "Content-Type",
@@ -2629,11 +3395,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE=\""
+          "Value": "\"g8IznlKMM0YLp7rmTBzgQ2nPn9tuPO3YWuP7XJtQEZQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2643,7 +3409,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "4gxs3k148c"
+          "Value": "fh1kuoghqu"
         },
         {
           "Name": "label",
@@ -2651,7 +3417,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE="
+          "Value": "sha256-g8IznlKMM0YLp7rmTBzgQ2nPn9tuPO3YWuP7XJtQEZQ="
         }
       ]
     },
@@ -2666,7 +3432,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "536461"
+          "Value": "536471"
         },
         {
           "Name": "Content-Type",
@@ -2674,11 +3440,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE=\""
+          "Value": "\"g8IznlKMM0YLp7rmTBzgQ2nPn9tuPO3YWuP7XJtQEZQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2688,52 +3454,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.9b9oa1qrmt.css",
-      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "162825"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9b9oa1qrmt"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.rtl.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU="
+          "Value": "sha256-g8IznlKMM0YLp7rmTBzgQ2nPn9tuPO3YWuP7XJtQEZQ="
         }
       ]
     },
@@ -2748,7 +3469,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162825"
+          "Value": "162835"
         },
         {
           "Name": "Content-Type",
@@ -2756,11 +3477,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU=\""
+          "Value": "\"RRTATHnqkzwUdulPELmcoXRoyewM0rrUXrihVPSQblw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2770,12 +3491,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-22wR6QTidoeiRZXp6zkRQyMSUb/FB+Av11jqmZJF6uU="
+          "Value": "sha256-RRTATHnqkzwUdulPELmcoXRoyewM0rrUXrihVPSQblw="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.fctod5rc9n.map",
+      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.5h3fll86e2.map",
       "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2785,7 +3506,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "661035"
+          "Value": "661055"
         },
         {
           "Name": "Content-Type",
@@ -2793,11 +3514,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM=\""
+          "Value": "\"WWhI84A2844HSDpgRIuU/xznIj6w6FDX48OvoM/pvDc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2807,7 +3528,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "fctod5rc9n"
+          "Value": "5h3fll86e2"
         },
         {
           "Name": "label",
@@ -2815,7 +3536,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM="
+          "Value": "sha256-WWhI84A2844HSDpgRIuU/xznIj6w6FDX48OvoM/pvDc="
         }
       ]
     },
@@ -2830,7 +3551,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "661035"
+          "Value": "661055"
         },
         {
           "Name": "Content-Type",
@@ -2838,11 +3559,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM=\""
+          "Value": "\"WWhI84A2844HSDpgRIuU/xznIj6w6FDX48OvoM/pvDc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2852,13 +3573,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM="
+          "Value": "sha256-WWhI84A2844HSDpgRIuU/xznIj6w6FDX48OvoM/pvDc="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.ve6x09088i.css",
-      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.xlvdba6yzo.css",
+      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2867,7 +3588,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "203803"
+          "Value": "162835"
         },
         {
           "Name": "Content-Type",
@@ -2875,11 +3596,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY=\""
+          "Value": "\"RRTATHnqkzwUdulPELmcoXRoyewM0rrUXrihVPSQblw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2889,20 +3610,20 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ve6x09088i"
+          "Value": "xlvdba6yzo"
         },
         {
           "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.rtl.css"
+          "Value": "lib/bootstrap/dist/css/bootstrap.rtl.min.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-SZ2mKaD4A+b+HIvttwl+TvLFnVy8o8/X40j+EKVwyvY="
+          "Value": "sha256-RRTATHnqkzwUdulPELmcoXRoyewM0rrUXrihVPSQblw="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-grid.agp80tu62r.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap-grid.33k1fk1zud.css",
       "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2912,7 +3633,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "70538"
+          "Value": "70548"
         },
         {
           "Name": "Content-Type",
@@ -2920,11 +3641,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JtktgiuQAd+AXerCnPMrHCDz1h5AtkH5tobvpuG7xZ4=\""
+          "Value": "\"EdWlAK+gtuP1UWMZoUc1YaAno3VLT9jfGPuAjUmd9DY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2934,7 +3655,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "agp80tu62r"
+          "Value": "33k1fk1zud"
         },
         {
           "Name": "label",
@@ -2942,7 +3663,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-JtktgiuQAd+AXerCnPMrHCDz1h5AtkH5tobvpuG7xZ4="
+          "Value": "sha256-EdWlAK+gtuP1UWMZoUc1YaAno3VLT9jfGPuAjUmd9DY="
         }
       ]
     },
@@ -2957,7 +3678,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "70538"
+          "Value": "70548"
         },
         {
           "Name": "Content-Type",
@@ -2965,11 +3686,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JtktgiuQAd+AXerCnPMrHCDz1h5AtkH5tobvpuG7xZ4=\""
+          "Value": "\"EdWlAK+gtuP1UWMZoUc1YaAno3VLT9jfGPuAjUmd9DY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2979,7 +3700,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JtktgiuQAd+AXerCnPMrHCDz1h5AtkH5tobvpuG7xZ4="
+          "Value": "sha256-EdWlAK+gtuP1UWMZoUc1YaAno3VLT9jfGPuAjUmd9DY="
         }
       ]
     },
@@ -2994,7 +3715,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "196535"
+          "Value": "196545"
         },
         {
           "Name": "Content-Type",
@@ -3002,11 +3723,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QO8cMbVkLiktUX1cHeXSUSe5nXMXUgyL9cjwnMyxPqc=\""
+          "Value": "\"E1e38H9LymNK6ptazTP/aGvtWLFUedvejoN2f7yR/R8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3016,12 +3737,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-QO8cMbVkLiktUX1cHeXSUSe5nXMXUgyL9cjwnMyxPqc="
+          "Value": "sha256-E1e38H9LymNK6ptazTP/aGvtWLFUedvejoN2f7yR/R8="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.st1cbwfwo5.map",
+      "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.nv6p841b2k.map",
       "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3031,7 +3752,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "196535"
+          "Value": "196545"
         },
         {
           "Name": "Content-Type",
@@ -3039,11 +3760,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QO8cMbVkLiktUX1cHeXSUSe5nXMXUgyL9cjwnMyxPqc=\""
+          "Value": "\"E1e38H9LymNK6ptazTP/aGvtWLFUedvejoN2f7yR/R8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3053,7 +3774,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "st1cbwfwo5"
+          "Value": "nv6p841b2k"
         },
         {
           "Name": "label",
@@ -3061,7 +3782,52 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-QO8cMbVkLiktUX1cHeXSUSe5nXMXUgyL9cjwnMyxPqc="
+          "Value": "sha256-E1e38H9LymNK6ptazTP/aGvtWLFUedvejoN2f7yR/R8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.6js4x5oyqu.css",
+      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51329"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jqFpWWJshujY7ARKEe5q+Oy8OHvFnYLWcnxlBdfex3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6js4x5oyqu"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap-grid.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jqFpWWJshujY7ARKEe5q+Oy8OHvFnYLWcnxlBdfex3g="
         }
       ]
     },
@@ -3076,7 +3842,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "51319"
+          "Value": "51329"
         },
         {
           "Name": "Content-Type",
@@ -3084,11 +3850,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ysBT/JYxH9gcMnwxT4+MB4sPxOx/JMg9wi77FA13T9A=\""
+          "Value": "\"jqFpWWJshujY7ARKEe5q+Oy8OHvFnYLWcnxlBdfex3g=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3098,12 +3864,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ysBT/JYxH9gcMnwxT4+MB4sPxOx/JMg9wi77FA13T9A="
+          "Value": "sha256-jqFpWWJshujY7ARKEe5q+Oy8OHvFnYLWcnxlBdfex3g="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css.5vj65cig9w.map",
+      "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css.89mhde4ypa.map",
       "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3113,7 +3879,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "117439"
+          "Value": "117449"
         },
         {
           "Name": "Content-Type",
@@ -3121,11 +3887,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"72C/qDCGu+OwWeVA03bf9Ke0T8oIozCub0lfJkhzhvE=\""
+          "Value": "\"7G+gpot39zFoAO9TTCpslm6Jpkttdqn18Y1GsqEegyo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3135,7 +3901,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5vj65cig9w"
+          "Value": "89mhde4ypa"
         },
         {
           "Name": "label",
@@ -3143,7 +3909,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-72C/qDCGu+OwWeVA03bf9Ke0T8oIozCub0lfJkhzhvE="
+          "Value": "sha256-7G+gpot39zFoAO9TTCpslm6Jpkttdqn18Y1GsqEegyo="
         }
       ]
     },
@@ -3158,7 +3924,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "117439"
+          "Value": "117449"
         },
         {
           "Name": "Content-Type",
@@ -3166,11 +3932,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"72C/qDCGu+OwWeVA03bf9Ke0T8oIozCub0lfJkhzhvE=\""
+          "Value": "\"7G+gpot39zFoAO9TTCpslm6Jpkttdqn18Y1GsqEegyo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3180,52 +3946,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-72C/qDCGu+OwWeVA03bf9Ke0T8oIozCub0lfJkhzhvE="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.unj9p35syc.css",
-      "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "51319"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ysBT/JYxH9gcMnwxT4+MB4sPxOx/JMg9wi77FA13T9A=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "unj9p35syc"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap-grid.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ysBT/JYxH9gcMnwxT4+MB4sPxOx/JMg9wi77FA13T9A="
+          "Value": "sha256-7G+gpot39zFoAO9TTCpslm6Jpkttdqn18Y1GsqEegyo="
         }
       ]
     },
@@ -3240,7 +3961,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "70612"
+          "Value": "70622"
         },
         {
           "Name": "Content-Type",
@@ -3248,11 +3969,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3vUJkZSpKL/zG7x6GNvDjs0TxYUo9zMt6dAc8hp9CVo=\""
+          "Value": "\"tY2kFKg+TA+S63k6VRatQaACNmJ9WAsMtLS15gLP2lA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3262,12 +3983,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-3vUJkZSpKL/zG7x6GNvDjs0TxYUo9zMt6dAc8hp9CVo="
+          "Value": "sha256-tY2kFKg+TA+S63k6VRatQaACNmJ9WAsMtLS15gLP2lA="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.2q4vfeazbq.map",
+      "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.dg3i8yakqh.map",
       "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3277,7 +3998,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "196539"
+          "Value": "196549"
         },
         {
           "Name": "Content-Type",
@@ -3285,11 +4006,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"qvA39OMlEs53jaewqVFmE8DQQrio47bZtlTs+Wu6U8g=\""
+          "Value": "\"A67KqsYd/pjVS2ydqZrX1KJ2+xDD0Vv1hTLw2HdZlzk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3299,7 +4020,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "2q4vfeazbq"
+          "Value": "dg3i8yakqh"
         },
         {
           "Name": "label",
@@ -3307,7 +4028,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-qvA39OMlEs53jaewqVFmE8DQQrio47bZtlTs+Wu6U8g="
+          "Value": "sha256-A67KqsYd/pjVS2ydqZrX1KJ2+xDD0Vv1hTLw2HdZlzk="
         }
       ]
     },
@@ -3322,7 +4043,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "196539"
+          "Value": "196549"
         },
         {
           "Name": "Content-Type",
@@ -3330,11 +4051,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"qvA39OMlEs53jaewqVFmE8DQQrio47bZtlTs+Wu6U8g=\""
+          "Value": "\"A67KqsYd/pjVS2ydqZrX1KJ2+xDD0Vv1hTLw2HdZlzk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3344,7 +4065,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-qvA39OMlEs53jaewqVFmE8DQQrio47bZtlTs+Wu6U8g="
+          "Value": "sha256-A67KqsYd/pjVS2ydqZrX1KJ2+xDD0Vv1hTLw2HdZlzk="
         }
       ]
     },
@@ -3359,7 +4080,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "51394"
+          "Value": "51404"
         },
         {
           "Name": "Content-Type",
@@ -3367,11 +4088,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"O6lb2kXarGgVw4/RDD42yYPhZIwREthThQFKGmD+3j0=\""
+          "Value": "\"nZulgFHO7Cvpg9v6oxovhq30rDVPfF0Gth+fCefOnEg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3381,7 +4102,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-O6lb2kXarGgVw4/RDD42yYPhZIwREthThQFKGmD+3j0="
+          "Value": "sha256-nZulgFHO7Cvpg9v6oxovhq30rDVPfF0Gth+fCefOnEg="
         }
       ]
     },
@@ -3396,7 +4117,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "117516"
+          "Value": "117526"
         },
         {
           "Name": "Content-Type",
@@ -3404,11 +4125,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NDSZjIiMPRIoO7/w7+jHef8retP4riQa8PMj4BVRGok=\""
+          "Value": "\"cbBCVrfJttDV144i82zYTM/PkF0/lC9WKDqykKOx6Dc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3418,12 +4139,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-NDSZjIiMPRIoO7/w7+jHef8retP4riQa8PMj4BVRGok="
+          "Value": "sha256-cbBCVrfJttDV144i82zYTM/PkF0/lC9WKDqykKOx6Dc="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.o371a8zbv2.map",
+      "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.vkqk0ndcza.map",
       "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3433,7 +4154,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "117516"
+          "Value": "117526"
         },
         {
           "Name": "Content-Type",
@@ -3441,11 +4162,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NDSZjIiMPRIoO7/w7+jHef8retP4riQa8PMj4BVRGok=\""
+          "Value": "\"cbBCVrfJttDV144i82zYTM/PkF0/lC9WKDqykKOx6Dc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3455,7 +4176,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "o371a8zbv2"
+          "Value": "vkqk0ndcza"
         },
         {
           "Name": "label",
@@ -3463,12 +4184,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-NDSZjIiMPRIoO7/w7+jHef8retP4riQa8PMj4BVRGok="
+          "Value": "sha256-cbBCVrfJttDV144i82zYTM/PkF0/lC9WKDqykKOx6Dc="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.n1oizzvkh6.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.v9oylsd7i9.css",
       "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3478,7 +4199,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "51394"
+          "Value": "51404"
         },
         {
           "Name": "Content-Type",
@@ -3486,11 +4207,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"O6lb2kXarGgVw4/RDD42yYPhZIwREthThQFKGmD+3j0=\""
+          "Value": "\"nZulgFHO7Cvpg9v6oxovhq30rDVPfF0Gth+fCefOnEg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3500,7 +4221,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "n1oizzvkh6"
+          "Value": "v9oylsd7i9"
         },
         {
           "Name": "label",
@@ -3508,12 +4229,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-O6lb2kXarGgVw4/RDD42yYPhZIwREthThQFKGmD+3j0="
+          "Value": "sha256-nZulgFHO7Cvpg9v6oxovhq30rDVPfF0Gth+fCefOnEg="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.q2ku51ktnl.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.r0j0mfao7d.css",
       "AssetFile": "D:\\My Portfolio\\BackEnd\\.Net MVC projects\\E-commerce mvc project\\E-commerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3523,7 +4244,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "70612"
+          "Value": "70622"
         },
         {
           "Name": "Content-Type",
@@ -3531,11 +4252,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3vUJkZSpKL/zG7x6GNvDjs0TxYUo9zMt6dAc8hp9CVo=\""
+          "Value": "\"tY2kFKg+TA+S63k6VRatQaACNmJ9WAsMtLS15gLP2lA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:20:45 GMT"
+          "Value": "Sun, 20 Jul 2025 15:36:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3545,7 +4266,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "q2ku51ktnl"
+          "Value": "r0j0mfao7d"
         },
         {
           "Name": "label",
@@ -3553,7 +4274,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-3vUJkZSpKL/zG7x6GNvDjs0TxYUo9zMt6dAc8hp9CVo="
+          "Value": "sha256-tY2kFKg+TA+S63k6VRatQaACNmJ9WAsMtLS15gLP2lA="
         }
       ]
     },

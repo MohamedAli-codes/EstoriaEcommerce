@@ -1,0 +1,101 @@
+﻿@model ApplicationUser
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+
+<div class="row p-1 mx-auto">
+    <div class="col-lg-6 mx-auto rounded border p-4">
+        <h2 class="text-center mb-3 " id="brand-primary-color">User Details</h2>
+        <hr />
+        @if (TempData.Keys.Contains("ErrorMessages"))
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>@TempData["ErrorMessages"]</strong> 
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+        }
+        <div class="row mb-2">
+            <div class="col-sm-4 fw-bolder">First Name</div>
+            <div class="col-sm-8 ">@Model.FirstName</div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-sm-4 fw-bolder">Last Name</div>
+            <div class="col-sm-8">@Model.LastName</div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-sm-4 fw-bolder">Email</div>
+            <div class="col-sm-8">@Model.Email</div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-sm-4 fw-bolder">Phone</div>
+            <div class="col-sm-8">@Model.PhoneNumber</div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-sm-4 fw-bolder">Address</div>
+            <div class="col-sm-8">@Model.Address</div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-sm-4 fw-bolder">Roles</div>
+            <div class="col-sm-8">
+                @{
+                    var roles = ViewBag.Roles;
+                    var rolesStr = String.Join(", ", roles);
+                    string color = "black";
+                }
+                @if (rolesStr.Contains("admin"))
+                {
+                    color = "bg-danger text-dark";
+                }
+                else if (rolesStr.Contains("seller"))
+                {
+                    color = "bg-warning text-dark";
+                }
+                else
+                {
+                    color = "bg-info text-dark";
+                }
+                <span class="badge  rounded-pill  @color">@rolesStr</span>
+            </div>
+        </div>
+        <hr />
+
+        <div class="row mb-2 mx-1">
+            <!-- Button trigger modal -->
+            <button type="button" class="col-2 btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                Delete
+            </button>
+            <a asp-action="Details" class="col-2 mx-3 d-inline-block btn btn-primary">Back</a>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-danger" id="exampleModalLabel">Delete Alert</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to Delete @Model.FirstName account ?
+            </div>
+            <div class="modal-footer">
+                <a asp-action="Delete" asp-controller="User" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

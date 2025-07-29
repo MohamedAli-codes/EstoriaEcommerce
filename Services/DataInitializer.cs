@@ -15,22 +15,22 @@ namespace E_commerce.Services
             }
 
             //check if admin role exists
-            var exists = await roleManager.RoleExistsAsync("Admin");
+            var exists = await roleManager.RoleExistsAsync("admin");
             if (!exists) {
-                Console.WriteLine("admin role is not defined and will be created.");
-                await roleManager.CreateAsync(new IdentityRole("Admin"));
+                Console.WriteLine("admin role is not defined and admin be created.");
+                await roleManager.CreateAsync(new IdentityRole("admin"));
             }
 
             //check if seller role exists
-            exists = await roleManager.RoleExistsAsync("Seller");
+            exists = await roleManager.RoleExistsAsync("seller");
             if (!exists)
             {
                 Console.WriteLine("seller role is not defined and will be created.");
-                await roleManager.CreateAsync(new IdentityRole("Seller"));
+                await roleManager.CreateAsync(new IdentityRole("seller"));
             }
 
             //check if client role exists
-            exists = await roleManager.RoleExistsAsync("Client");
+            exists = await roleManager.RoleExistsAsync("client");
             if (!exists)
             {
                 Console.WriteLine("client role is not defined and will be created.");
@@ -39,7 +39,7 @@ namespace E_commerce.Services
 
 
             /*check if we have at least one admin exists*/
-            var adminUsers = await userManager.GetUsersInRoleAsync("Admin");
+            var adminUsers = await userManager.GetUsersInRoleAsync("admin");
             if (adminUsers.Any()) {
                 Console.WriteLine("admin user already exists");
                 return;
@@ -59,7 +59,7 @@ namespace E_commerce.Services
                 
                 //set admin role to user
                 if (result.Succeeded) {
-                    await userManager.AddToRoleAsync(user, "Admin");
+                    await userManager.AddToRoleAsync(user, "admin");
                     Console.WriteLine("Admin user created successfully! Please update the initial password: ");
                     Console.WriteLine($"Email: {user.Email} ");
                     Console.WriteLine($"Initial password: {initialPassword} ");
